@@ -15,28 +15,14 @@
                 placeholder="Search..."/>
             <span
                 class="absolute left-5 top-1/2 grid -translate-y-1/2 place-items-center text-xl text-cyan-600 transition-colors duration-300 peer-focus/changeIconColor:text-cyan-400">
-          <!-- Search Icon -->
-          <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/>
-          </svg>
+                <x-icons.magnifying-glass/>
         </span>
         </div>
         <div>
             <a href="#"
                class="flex items-center justify-center gap-2 rounded-full bg-cyan-600 px-8 py-2.5 font-semibold text-white hover:bg-cyan-700 focus:border-none focus:outline-none focus:ring focus:ring-cyan-400 active:bg-cyan-600 md:w-40">
                 <span class="shrink-0">Admin</span>
-                <!-- Admin Icon -->
-                <svg class="size-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
-                     stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M10 9a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/>
-                    <path d="M4 8v-2a2 2 0 0 1 2 -2h2"/>
-                    <path d="M4 16v2a2 2 0 0 0 2 2h2"/>
-                    <path d="M16 4h2a2 2 0 0 1 2 2v2"/>
-                    <path d="M16 20h2a2 2 0 0 0 2 -2v-2"/>
-                    <path d="M8 16a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2"/>
-                </svg>
+                <x-icons.admin-user/>
             </a>
         </div>
     </div>
