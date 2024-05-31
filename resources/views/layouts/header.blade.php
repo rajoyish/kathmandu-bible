@@ -19,7 +19,7 @@
         </span>
         </div>
         <div>
-            <a href="#"
+            <a href="/admin"
                class="flex items-center justify-center gap-2 rounded-full bg-cyan-600 px-8 py-2.5 font-semibold text-white hover:bg-cyan-700 focus:border-none focus:outline-none focus:ring focus:ring-cyan-400 active:bg-cyan-600 md:w-40">
                 <span class="shrink-0">Admin</span>
                 <x-icons.admin-user/>
