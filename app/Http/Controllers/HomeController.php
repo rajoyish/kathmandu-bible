@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Slider;
 
 class HomeController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
-    public function __invoke(Request $request)
+    public function index()
     {
         return view('home.index');
+    }
+
+    public function indexSlider()
+    {
+        $sliders = Slider::select('photo')->latest()->get();
+
+        return view('home.index', ['sliders' => $sliders]);
     }
 }

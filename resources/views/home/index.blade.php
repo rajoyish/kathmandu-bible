@@ -1,3 +1,3 @@
 <x-guest-layout>
-    @include('layouts.sliders')
+    @include('home.slider')
 </x-guest-layout>
