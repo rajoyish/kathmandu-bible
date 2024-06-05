@@ -1,7 +1,7 @@
 <section class="p-4 lg:flex lg:items-center lg:justify-between lg:p-8">
     <header class="flex flex-col items-center justify-center gap-2 md:flex-row md:gap-4">
-        <img src="{{ asset('images/logo-KBI.jpg') }}" alt="Logo of Kathmandu Bible Institute And Research Center"
-             class="block size-20 object-contain sm:size-32"/>
+        <img src="{{ asset('images/KBI-logo-new.jpg') }}" alt="Logo of Kathmandu Bible Institute And Research Center"
+             class="block object-contain h-28 "/>
         <div
             class="text-center text-xl font-bold uppercase tracking-tight text-blue-800 md:space-y-2 md:text-left md:text-3xl">
             <h1>Kathmandu Bible Institute</h1>
@@ -16,7 +16,7 @@
             <span
                 class="absolute left-5 top-1/2 grid -translate-y-1/2 place-items-center text-xl text-cyan-600 transition-colors duration-300 peer-focus/changeIconColor:text-cyan-400">
                 <x-icons.magnifying-glass/>
-        </span>
+            </span>
         </div>
         <div>
             <a href="/admin"

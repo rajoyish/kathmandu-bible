@@ -6,7 +6,8 @@
                 <x-icons.x-mark/>
             </button>
 
-            <ul class="z-50 items-center max-md:fixed max-md:left-0 max-md:top-0 max-md:h-full max-md:w-2/3 max-md:min-w-[300px] max-md:space-y-3 max-md:overflow-auto max-md:bg-white max-md:p-4 max-md:shadow-md md:flex md:gap-x-10">
+            <ul
+                class="z-50 items-center max-md:fixed max-md:left-0 max-md:top-0 max-md:h-full max-md:w-2/3 max-md:min-w-[300px] max-md:space-y-3 max-md:overflow-auto max-md:bg-white max-md:p-4 max-md:shadow-md md:flex md:gap-x-10">
                 <x-nav-links/>
             </ul>
         </div>
