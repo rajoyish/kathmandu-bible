@@ -27,4 +27,14 @@ class AboutUsController extends Controller
 
         return view('about-us.vision-purpose-mission');
     }
+
+    public function CoreValues()
+    {
+        $title = 'Core Values';
+
+        SEOMeta::setTitle($title);
+        OpenGraph::setTitle($title);
+
+        return view('about-us.core-values');
+    }
 }

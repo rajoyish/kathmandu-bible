@@ -23,6 +23,11 @@
                 Vision, Purpose and Mission
             </x-sub-nav-item>
         </x-sub-li-nav>
+        <x-sub-li-nav :active="request()->routeIs('core-values')">
+            <x-sub-nav-item :href="route('core-values')" :active="request()->routeIs('core-values')">
+                Core Values
+            </x-sub-nav-item>
+        </x-sub-li-nav>
         <x-sub-li-nav>
             <x-sub-nav-item>
                 Statement of Faith
