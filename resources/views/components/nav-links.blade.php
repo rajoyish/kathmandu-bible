@@ -28,8 +28,8 @@
                 Core Values
             </x-sub-nav-item>
         </x-sub-li-nav>
-        <x-sub-li-nav>
-            <x-sub-nav-item>
+        <x-sub-li-nav :active="request()->routeIs('statement-of-faith')">
+            <x-sub-nav-item :href="route('statement-of-faith')" :active="request()->routeIs('statement-of-faith')">
                 Statement of Faith
             </x-sub-nav-item>
         </x-sub-li-nav>

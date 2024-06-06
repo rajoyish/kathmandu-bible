@@ -37,4 +37,14 @@ class AboutUsController extends Controller
 
         return view('about-us.core-values');
     }
+
+    public function statementOfFaith()
+    {
+        $title = 'Statement of Faith';
+
+        SEOMeta::setTitle($title);
+        OpenGraph::setTitle($title);
+
+        return view('about-us.statement-of-faith');
+    }
 }
