@@ -17,9 +17,4 @@ class HomeController extends Controller
 
         return view('home.index', ['sliders' => $sliders]);
     }
-
-    public function indexIntroduction()
-    {
-        return view('about-us.introduction');
-    }
 }
