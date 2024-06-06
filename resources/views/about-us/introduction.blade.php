@@ -135,13 +135,15 @@
                 <div class="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
                     <div class="lg:w-full lg:max-w-2xl lg:flex-auto">
                         <div class="max-w-xl space-y-4 leading-7 text-slate-700">
-                            <p>KBI is committed to deepening your biblical, theological, and contextual knowledge while
-                                enhancing your skills and spiritual gifts. Our mission is to instill a sense of urgency
-                                for God's mission, encouraging you to actively participate in making disciples and
-                                contributing to the national movement to fulfill the Great Commission in this
-                                generation. We believe that every student has the potential to be an influential leader
-                                and a dedicated servant in God's kingdom, and we strive to help you realize this
-                                potential through rigorous academic training and spiritual development.</p>
+                            <p>
+                                KBI is committed to deepening your biblical, theological, historical, and contextual
+                                knowledge while enhancing your skills and spiritual gifts. Our mission is to instill a
+                                sense of urgency for God's mission, encouraging you to actively participate in making
+                                disciples and contributing to the national movement to fulfill the Great Commission in
+                                this generation. We believe that every student has the potential to be an influential
+                                leader and a dedicated servant in God's kingdom, and we strive to help you realize this
+                                potential through rigorous academic training and spiritual development.
+                            </p>
                             <p>Everything we do at KBI is centered around glorifying God. Our Christ-centric approach
                                 ensures that Jesus Christ is at the heart of our teachings, guiding our actions and
                                 decisions. We seek the guidance and empowerment of the Holy Spirit in all our endeavors,
