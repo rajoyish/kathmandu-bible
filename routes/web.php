@@ -10,5 +10,6 @@ Route::controller(HomeController::class)->group(function () {
 });
 
 Route::controller(AboutUsController::class)->group(function () {
-    Route::get('about-us/introduction', 'introduction')->name('about-us.introduction');
+    Route::get('introduction', 'introduction')->name('introduction');
+    Route::get('vision-purpose-and-mission', 'visionPurposeAndMission')->name('vision-purpose-and-mission');
 });

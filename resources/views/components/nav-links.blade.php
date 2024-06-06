@@ -13,14 +13,14 @@
         left-0 top-10 z-50 block max-h-0 min-w-[300px] space-y-2 overflow-hidden rounded-b-lg bg-white px-6 shadow-lg
         transition-all duration-500 group-hover:max-h-[700px] group-hover:pb-4 group-hover:pt-6 group-hover:opacity-100
         max-md:top-8">
-        <x-sub-li-nav :active="request()->routeIs('about-us.introduction')">
-            <x-sub-nav-item :href="route('about-us.introduction')" :active="request()->routeIs('about-us.introduction')">
+        <x-sub-li-nav :active="request()->routeIs('introduction')">
+            <x-sub-nav-item :href="route('introduction')" :active="request()->routeIs('introduction')">
                 Introduction
             </x-sub-nav-item>
         </x-sub-li-nav>
-        <x-sub-li-nav>
-            <x-sub-nav-item>
-                Mission & Vision
+        <x-sub-li-nav :active="request()->routeIs('vision-purpose-and-mission')">
+            <x-sub-nav-item :href="route('vision-purpose-and-mission')" :active="request()->routeIs('vision-purpose-and-mission')">
+                Vision, Purpose and Mission
             </x-sub-nav-item>
         </x-sub-li-nav>
         <x-sub-li-nav>

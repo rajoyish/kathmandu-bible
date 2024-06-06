@@ -17,4 +17,14 @@ class AboutUsController extends Controller
 
         return view('about-us.introduction');
     }
+
+    public function visionPurposeAndMission()
+    {
+        $title = 'Vision Purpose And Mission';
+
+        SEOMeta::setTitle($title);
+        OpenGraph::setTitle($title);
+
+        return view('about-us.vision-purpose-mission');
+    }
 }
