@@ -2,11 +2,11 @@
     <section class="isolate">
         <!-- Hero section -->
         <div class="relative isolate -z-10">
-            <div
-                class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
+            <div class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
                 aria-hidden="true">
                 <div class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-cyan-300 to-emerald-400 opacity-30"
-                     style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)"></div>
+                    style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)">
+                </div>
             </div>
             <div class="overflow-hidden">
                 <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
@@ -15,7 +15,7 @@
                             <div class="mb-8 flex">
                                 <div
                                     class="relative flex items-center gap-x-4 rounded-full px-4 py-1 leading-6 text-slate-600 ring-1 ring-cyan-600 hover:ring-gray-900/20">
-                                    <span class="font-semibold text-blue-700">Introduction to KBI</span>
+                                    <span class="font-semibold text-blue-700">Introduction</span>
                                     <span class="h-4 w-px bg-gray-900/10" aria-hidden="true"></span>
                                     <p class="flex items-center gap-x-1">
                                         <span class="absolute inset-0" aria-hidden="true"></span>
@@ -39,37 +39,42 @@
                                 class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                                 <div class="relative">
                                     <img src="{{ asset('images/about-us/about-img.jpg') }}" alt=""
-                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"/>
+                                        class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
                                     <div
-                                        class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                                        class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10">
+                                    </div>
                                 </div>
                             </div>
                             <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                                 <div class="relative">
                                     <img src="{{ asset('images/about-us/about-img3.jpg') }}" alt=""
-                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"/>
+                                        class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
                                     <div
-                                        class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                                        class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10">
+                                    </div>
                                 </div>
                                 <div class="relative">
                                     <img src="{{ asset('images/about-us/about-img4.jpg') }}" alt=""
-                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"/>
+                                        class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
                                     <div
-                                        class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                                        class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10">
+                                    </div>
                                 </div>
                             </div>
                             <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                                 <div class="relative">
                                     <img src="{{ asset('images/about-us/about-img6.jpg') }}" alt=""
-                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"/>
+                                        class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
                                     <div
-                                        class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                                        class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10">
+                                    </div>
                                 </div>
                                 <div class="relative">
                                     <img src="{{ asset('images/about-us/about-img2.jpg') }}" alt=""
-                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"/>
+                                        class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
                                     <div
-                                        class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                                        class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -120,9 +125,8 @@
 
         <!-- Image section -->
         <div class="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-            <img
-                src="{{ asset('images/about-us/about-img2.jpg') }}"
-                alt="" class="aspect-[5/2] w-full object-cover xl:rounded-3xl"/>
+            <img src="{{ asset('images/about-us/about-img2.jpg') }}" alt=""
+                class="aspect-[5/2] w-full object-cover xl:rounded-3xl" />
         </div>
 
         <!-- Content section 2 -->
@@ -196,7 +200,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </section>
 </x-guest-layout>
