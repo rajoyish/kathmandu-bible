@@ -24,4 +24,6 @@ Route::controller(AcademicProgramController::class)->group(function () {
         ->name('diploma-in-theology-dip-th');
     Route::get('academic-programs/bachelor-of-theology-b-th', 'bachelorOfTheology')
         ->name('bachelor-of-theology-b-th');
+    Route::get('academic-programs/m-a-in-christian-missions', 'mAInChristianMissions')
+        ->name('m-a-in-christian-missions');
 });

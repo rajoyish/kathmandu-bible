@@ -37,4 +37,14 @@ class AcademicProgramController extends Controller
 
         return view('academic-programs.bachelor-of-theology-b-th');
     }
+
+    public function mAInChristianMissions()
+    {
+        $title = 'M.A. in Christian Missions';
+
+        SEOMeta::setTitle($title);
+        OpenGraph::setTitle($title);
+
+        return view('academic-programs.m-a-in-christian-missions');
+    }
 }
