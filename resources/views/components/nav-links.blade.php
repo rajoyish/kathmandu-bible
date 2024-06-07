@@ -45,8 +45,8 @@
     </a>
     <ul
         class="absolute left-0 top-10 z-50 block max-h-0 min-w-[300px] space-y-2 overflow-hidden rounded-b-lg bg-white px-6 shadow-lg transition-all duration-500 group-hover:max-h-[700px] group-hover:pb-4 group-hover:pt-6 group-hover:opacity-100 max-md:top-8">
-        <x-sub-li-nav>
-            <x-sub-nav-item>
+        <x-sub-li-nav :active="request()->routeIs('certificate-in-theology-c-th')">
+            <x-sub-nav-item :href="route('certificate-in-theology-c-th')" :active="request()->routeIs('certificate-in-theology-c-th')">
                 Certificate in Theology (C. Th.)
             </x-sub-nav-item>
         </x-sub-li-nav>
