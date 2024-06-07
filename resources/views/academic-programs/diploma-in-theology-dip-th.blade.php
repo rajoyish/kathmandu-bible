@@ -5,20 +5,22 @@
             <div class="px-6 py-8 lg:px-8">
                 <div class="mx-auto max-w-4xl text-center">
                     <h2 class="text-4xl font-bold leading-tight text-slate-700 sm:text-6xl">
-                        Certificate in Theology
+                        Diploma in Theology
                     </h2>
                 </div>
             </div>
             <!-- Content -->
             <div class="mx-auto sm:px-4 py-8 sm:py-16 lg:px-6">
                 <div class="mb-8 text-center lg:mb-16">
-                    <h2 class="mb-4 text-3xl font-bold uppercase text-slate-700 "> C. Th. <span
+                    <h2 class="mb-4 text-3xl font-bold uppercase text-slate-700 "> Dip. Th. <span
                             class="text-cyan-500">&#x2022</span>
                         <span class="text-slate-600">Nepali Medium</span>
                     </h2>
-                    <p class="text-slate-600 leading-relaxed"> The Certificate in Theology is a one-year,
-                        non-residential program offered in Nepali. Classes are held twice a week, with each session
-                        lasting three hours. The program runs throughout the year. </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        The Diploma in Theology is a two-year program offered in Nepali. It is a non-residential course
+                        with classes taught in a modular system. Each month focuses on one subject, with classes held
+                        twice a week, three hours per day.
+                    </p>
                 </div>
                 <div class="space-y-8 md:gap-10 md:grid md:grid-cols-2 md:space-y-0 lg:grid-cols-3">
                     <div class="bg-white p-8 shadow-xl rounded-lg">
@@ -30,28 +32,30 @@
                             <div>
                                 <h3 class="font-bold text-slate-700 text-xl">Purpose</h3>
                                 <div class="space-y-2">
-                                    <p class="text-slate-600">This program is for local church members, both men and
-                                        women, who haven't attended school or college but want to study the Bible,
-                                        do evangelism, and support church missions. The main goal is to train new
-                                        Christians to become effective lay ministers for the church and community.
-                                    </p>
-                                    <p class="text-slate-600">The program covers twelve different subjects, each
-                                        requiring 2 credit hours to complete.
+                                    <p class="text-slate-600">
+                                        This program is designed for lay leaders in local churches who do not have
+                                        formal education but are involved in ministry. It provides basic knowledge of
+                                        the Bible, theology, mission, history, inductive interpretation methods, sermon
+                                        preparation and delivery, church planting, church governance and administration,
+                                        evangelism, discipleship, and leadership.
                                     </p>
                                 </div>
                             </div>
                             <div>
                                 <h3 class="font-bold text-slate-700 text-xl">Vision</h3>
                                 <div class="space-y-2">
-                                    <p class="text-slate-600">We aim to see every lay believer become an effective
-                                        instrument of God's mission. </p>
+                                    <p class="text-slate-600">
+                                        Our goal is to have trained grassroots leaders in every local church across the
+                                        country.
+                                    </p>
                                 </div>
                             </div>
                             <div>
                                 <h3 class="font-bold text-slate-700 text-xl">Program Requirements</h3>
                                 <div class="space-y-2">
-                                    <p class="text-slate-600"> Students must complete <strong>24 credits</strong> to
-                                        graduate. </p>
+                                    <p class="text-slate-600">
+                                        Students need to complete <strong>48 credits</strong> to graduate.
+                                    </p>
                                 </div>
                             </div>
                         </div>

@@ -17,4 +17,24 @@ class AcademicProgramController extends Controller
 
         return view('academic-programs.certificate-in-theology-c-th');
     }
+
+    public function diplomaInTheology()
+    {
+        $title = 'Diploma in Theology (Dip. Th.)';
+
+        SEOMeta::setTitle($title);
+        OpenGraph::setTitle($title);
+
+        return view('academic-programs.diploma-in-theology-dip-th');
+    }
+
+    public function bachelorOfTheology()
+    {
+        $title = 'Bachelor of Theology (B. Th.)';
+
+        SEOMeta::setTitle($title);
+        OpenGraph::setTitle($title);
+
+        return view('academic-programs.bachelor-of-theology-b-th');
+    }
 }

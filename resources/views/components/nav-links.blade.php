@@ -50,13 +50,13 @@
                 Certificate in Theology (C. Th.)
             </x-sub-nav-item>
         </x-sub-li-nav>
-        <x-sub-li-nav>
-            <x-sub-nav-item>
+        <x-sub-li-nav :active="request()->routeIs('diploma-in-theology-dip-th')">
+            <x-sub-nav-item :href="route('diploma-in-theology-dip-th')" :active="request()->routeIs('diploma-in-theology-dip-th')">
                 Diploma in Theology (Dip. Th.)
             </x-sub-nav-item>
         </x-sub-li-nav>
-        <x-sub-li-nav>
-            <x-sub-nav-item>
+        <x-sub-li-nav :active="request()->routeIs('bachelor-of-theology-b-th')">
+            <x-sub-nav-item :href="route('bachelor-of-theology-b-th')" :active="request()->routeIs('bachelor-of-theology-b-th')">
                 Bachelor of Theology (B. Th.)
             </x-sub-nav-item>
         </x-sub-li-nav>
