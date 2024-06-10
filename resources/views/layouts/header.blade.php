@@ -1,4 +1,4 @@
-<section class="p-4 lg:flex lg:items-center lg:justify-between lg:p-8">
+<section class="p-4 lg:flex lg:items-center z-50 lg:justify-between lg:p-8">
     <a href="/">
         <header class="flex flex-col items-center justify-center gap-2 md:flex-row md:gap-4">
             <img src="{{ asset('images/KBI-logo-new.jpg') }}" alt="Logo of Kathmandu Bible Institute And Research Center"
@@ -21,7 +21,7 @@
             </span>
         </div>
         <div>
-            <a href="/admin"
+            <a href="{{ route('filament.admin.auth.login') }}"
                 class="flex items-center justify-center gap-2 rounded-full bg-cyan-600 px-8 py-2.5 font-semibold text-white hover:bg-cyan-700 focus:border-none focus:outline-none focus:ring focus:ring-cyan-400 active:bg-cyan-600 md:w-40">
                 <span class="shrink-0">Admin</span>
                 <x-icons.admin-user />

@@ -1,5 +1,5 @@
-<div class="bg-white">
-    <div class="relative isolate px-6 pt-14 lg:px-8">
+<div class="bg-white isolate">
+    <div class="relative isolate -z-10 px-6 pt-14 lg:px-8">
         <x-top-mesh-gradient />
         <!-- content -->
         <div class="text-center lg:flex lg:items-center lg:text-left">
