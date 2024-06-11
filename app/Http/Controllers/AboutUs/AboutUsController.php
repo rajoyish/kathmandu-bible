@@ -10,6 +10,7 @@ class AboutUsController extends Controller
 {
     public function introduction()
     {
+
         $title = 'Introduction';
 
         SEOMeta::setTitle($title);

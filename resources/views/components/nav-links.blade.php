@@ -33,6 +33,21 @@
                 Statement of Faith
             </x-sub-nav-item>
         </x-sub-li-nav>
+        <x-sub-li-nav>
+            <x-sub-nav-item>
+                Message from the Principal
+            </x-sub-nav-item>
+        </x-sub-li-nav>
+        <x-sub-li-nav>
+            <x-sub-nav-item>
+                Board Members
+            </x-sub-nav-item>
+        </x-sub-li-nav>
+        <x-sub-li-nav>
+            <x-sub-nav-item>
+                Advisors
+            </x-sub-nav-item>
+        </x-sub-li-nav>
     </ul>
 </li>
 
@@ -70,8 +85,10 @@
 
 
 <x-nav-item>Faculty & Staff</x-nav-item>
-<x-nav-item>Students</x-nav-item>
-<x-nav-item>Gallery</x-nav-item>
+<x-nav-item>Testimonials</x-nav-item>
+<x-nav-item>Events</x-nav-item>
 <x-nav-item>Blog</x-nav-item>
+<x-nav-item>Gallery</x-nav-item>
+<x-nav-item>Downloads</x-nav-item>
 <x-nav-item>Donation</x-nav-item>
 <x-nav-item>Contact</x-nav-item>

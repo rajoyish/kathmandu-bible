@@ -1,7 +1,7 @@
-<nav x-data="" class="relative z-50 shadow-md">
+<nav class="relative z-50 shadow-md">
     <div class="relative flex flex-wrap justify-center bg-blue-800 px-10 py-3">
         <div id="collapseMenu"
-            class="max-md:hidden max-md:before:fixed max-md:before:inset-0 max-md:before:z-50 max-md:before:bg-black max-md:before:opacity-40 md:!block">
+             class="max-md:hidden max-md:before:fixed max-md:before:inset-0 max-md:before:z-50 max-md:before:bg-black max-md:before:opacity-40 md:!block">
             <button id="toggleClose" class="fixed right-4 top-2 z-[100] rounded-full bg-white p-3 md:hidden">
                 <x-icons.x-mark />
             </button>
