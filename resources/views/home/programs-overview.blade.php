@@ -1,6 +1,6 @@
 <section class="bg-slate-50">
-    <div class="mx-auto px-4 py-8 sm:py-16 md:px-16 lg:px-32">
-        <h2 class="mb-8 text-center text-3xl sm:text-5xl font-bold text-slate-600 sm:mb-16">Academic Programs</h2>
+    <div class="mx-auto px-4 py-8 sm:py-32 md:px-16 lg:px-32">
+        <h2 class="mb-8 text-center text-3xl sm:text-5xl font-bold text-slate-600 sm:mb-32">Academic Programs</h2>
         <div
             class="divide-y divide-slate-200 overflow-hidden rounded-lg bg-slate-200 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
             <div

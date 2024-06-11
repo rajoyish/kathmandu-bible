@@ -3,7 +3,7 @@
         <x-top-mesh-gradient />
         <!-- content -->
         <div class="text-center lg:flex lg:items-center lg:text-left">
-            <div class="basis-1/3">
+            <div class="basis-1/3 xl:ml-32">
                 <h1
                     class="mb-10 md:mb-16 w-full text-5xl font-bold text-slate-700 md:text-7xl lg:col-span-2 lg:max-w-6xl xl:col-auto">
                     Transform Your <span class="my-4 block text-blue-800">Ministry!</span></h1>
