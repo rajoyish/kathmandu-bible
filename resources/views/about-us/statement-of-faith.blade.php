@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="bg-white">
-        <section class="relative isolate px-6 pt-14 lg:px-8">
+        <section class="relative isolate px-6 pt-14 lg:px-8 mb-16">
             <x-top-mesh-gradient />
 
             <div class="mx-auto md:my-32 max-w-7xl px-6 lg:px-8">
