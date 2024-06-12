@@ -36,8 +36,8 @@
         Message from the Principal
       </x-sub-nav-item>
     </x-sub-li-nav>
-    <x-sub-li-nav>
-      <x-sub-nav-item>
+    <x-sub-li-nav :active="request()->routeIs('board-members')">
+      <x-sub-nav-item :href="route('board-members')" :active="request()->routeIs('board-members')">
         Board Members
       </x-sub-nav-item>
     </x-sub-li-nav>
