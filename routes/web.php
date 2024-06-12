@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutUs\AboutUsController;
 use App\Http\Controllers\AcademicProgram\AcademicProgramController;
+use App\Http\Controllers\Advisors\AdvisorController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,3 +28,5 @@ Route::controller(AcademicProgramController::class)->group(function () {
     Route::get('academic-programs/m-a-in-christian-missions', 'mAInChristianMissions')
         ->name('m-a-in-christian-missions');
 });
+
+Route::get('advisors', AdvisorController::class)->name('advisors');

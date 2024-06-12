@@ -41,8 +41,8 @@
         Board Members
       </x-sub-nav-item>
     </x-sub-li-nav>
-    <x-sub-li-nav>
-      <x-sub-nav-item>
+    <x-sub-li-nav :active="request()->routeIs('advisors')">
+      <x-sub-nav-item :href="route('advisors')" :active="request()->routeIs('advisors')">
         Advisors
       </x-sub-nav-item>
     </x-sub-li-nav>
