@@ -1,13 +1,25 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-BWUz79h5.css",
+    "file": "assets/app-44P-QJFu.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-wkQNiZ0m.js",
+    "file": "assets/app-Bg1aHGgo.js",
     "name": "app",
     "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/embla.js": {
+    "file": "assets/embla-BawVU2aT.js",
+    "name": "embla",
+    "src": "resources/js/embla.js",
+    "isEntry": true
+  },
+  "resources/js/nav.js": {
+    "file": "assets/nav-BiBcy3jk.js",
+    "name": "nav",
+    "src": "resources/js/nav.js",
     "isEntry": true
   }
 }

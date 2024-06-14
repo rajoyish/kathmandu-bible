@@ -1,0 +1,1 @@
+const t=document.getElementById("toggleOpen"),n=document.getElementById("toggleClose"),e=document.getElementById("collapseMenu");function l(){e.style.display==="block"?e.style.display="none":e.style.display="block"}t.addEventListener("click",l);n.addEventListener("click",l);
