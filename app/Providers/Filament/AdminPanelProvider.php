@@ -6,6 +6,7 @@ use Filament\FontProviders\GoogleFontProvider;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\NavigationItem;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -30,6 +31,13 @@ class AdminPanelProvider extends PanelProvider
             ->login()
             ->colors([
                 'primary' => Color::Blue,
+            ])
+            ->sidebarCollapsibleOnDesktop()
+            ->navigationItems([
+                NavigationItem::make('Home')
+                    ->url('/', shouldOpenInNewTab: true)
+                    ->icon('heroicon-o-window')
+                    ->sort(-3),
             ])
             ->font('Reddit Sans', provider: GoogleFontProvider::class)
             ->favicon(asset('images/KBI-favicon.svg'))

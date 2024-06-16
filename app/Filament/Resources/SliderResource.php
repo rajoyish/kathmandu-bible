@@ -31,7 +31,7 @@ class SliderResource extends Resource
                         ->imageEditorViewportHeight('594')
                         ->imageResizeTargetWidth('1440')
                         ->imageResizeTargetHeight('594')
-                        ->maxSize(1000),
+                        ->maxSize(1024),
                 ]),
             ]);
     }
