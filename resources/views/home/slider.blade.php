@@ -7,9 +7,3 @@
     @endforeach
   </div>
 </div>
-
-{{--@push('embla-script')--}}
-{{--  <script>--}}
-
-{{--  </script>--}}
-{{--@endpush--}}

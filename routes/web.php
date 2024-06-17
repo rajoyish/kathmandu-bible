@@ -4,6 +4,8 @@ use App\Http\Controllers\AboutUs\AboutUsController;
 use App\Http\Controllers\AcademicProgram\AcademicProgramController;
 use App\Http\Controllers\Advisors\AdvisorController;
 use App\Http\Controllers\BoardMember\BoardMemberController;
+use App\Http\Controllers\Gallery\GalleryIndexController;
+use App\Http\Controllers\Gallery\GalleryShowController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,3 +34,5 @@ Route::controller(AcademicProgramController::class)->group(function () {
 
 Route::get('advisors', AdvisorController::class)->name('advisors');
 Route::get('board-members', BoardMemberController::class)->name('board-members');
+Route::get('galleries', GalleryIndexController::class)->name('galleries.index');
+Route::get('galleries/{gallery:slug}', GalleryShowController::class)->name('galleries.show');

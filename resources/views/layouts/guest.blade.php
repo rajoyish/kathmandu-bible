@@ -25,7 +25,8 @@
 'resources/css/app.css',
 'resources/js/app.js',
 'resources/js/nav.js',
-'resources/js/embla.js'
+'resources/js/embla.js',
+'resources/js/photoswipe.js'
   ])
 </head>
 
