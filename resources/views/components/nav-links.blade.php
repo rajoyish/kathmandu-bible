@@ -91,7 +91,7 @@
 <x-nav-item>Testimonials</x-nav-item>
 <x-nav-item>Events</x-nav-item>
 <x-nav-item>Blog</x-nav-item>
-<x-nav-item>Gallery</x-nav-item>
+<x-nav-item :href="route('galleries.index')" :active="request()->routeIs('galleries.index')">Gallery</x-nav-item>
 <x-nav-item>Downloads</x-nav-item>
 <x-nav-item>Donation</x-nav-item>
 <x-nav-item>Contact</x-nav-item>

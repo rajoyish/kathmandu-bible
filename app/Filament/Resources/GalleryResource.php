@@ -13,6 +13,7 @@ use Filament\Support\Enums\FontWeight;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn\TextColumnSize;
 use Filament\Tables\Table;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class GalleryResource extends Resource
@@ -103,10 +104,12 @@ class GalleryResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                Tables\Actions\DeleteAction::make()->before(function (Gallery $record) {
+                    Storage::delete('public/'.$record->cover_photo);
+                }),
             ])
             ->bulkActions([
-
+                //
             ]);
     }
 

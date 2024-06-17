@@ -142,7 +142,8 @@
                 <a href="#" class="leading-6 text-slate-300 hover:text-cyan-500">Blog</a>
               </li>
               <li>
-                <a href="#" class="leading-6 text-slate-300 hover:text-cyan-500">Gallery</a>
+                <a href="{{ route('galleries.index') }}"
+                   class="leading-6 text-slate-300 hover:text-cyan-500">Gallery</a>
               </li>
               <li>
                 <a href="#" class="leading-6 text-slate-300 hover:text-cyan-500">Downloads</a>
