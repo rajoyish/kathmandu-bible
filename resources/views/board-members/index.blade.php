@@ -4,7 +4,7 @@
             <x-top-mesh-gradient />
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="mx-auto w-full lg:mx-0">
-                    <h2 class="text-center text-3xl font-bold text-slate-700 sm:text-5xl">Board Members</h2>
+                    <x-page-heading>Board of Members</x-page-heading>
                 </div>
                 <ul role="list"
                     class="mx-auto text-center mt-20 grid max-w-2xl grid-cols-1 gap-x-14 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-3">
@@ -26,6 +26,15 @@
                         </h3>
                         <p class="leading-7 text-slate-500">Member</p>
                         <p class="text-sm leading-6 text-slate-500">Nigah Chrishtiya Church, Narayanthan</p>
+                    </li>
+                    <li>
+                        <img class="aspect-[14/16] w-full rounded-xl object-cover"
+                            src="{{ asset('images/board-members/hari-sharan-shrestha.png') }}"
+                            alt="Rev. Pastor Hari Sharan Shrestha" />
+                        <h3 class="mt-6 text-xl font-semibold leading-8 text-slate-600">Rev. Pastor Hari Sharan Shrestha
+                        </h3>
+                        <p class="leading-7 text-slate-500">Member</p>
+                        <p class="text-sm leading-6 text-slate-500">Nigah Community Church, Thankot</p>
                     </li>
                     <li>
                         <img class="aspect-[14/16] w-full rounded-xl object-cover"
@@ -54,19 +63,34 @@
                     </li>
                     <li>
                         <img class="aspect-[14/16] w-full rounded-xl object-cover"
-                            src="{{ asset('images/board-members/hari-sharan-shrestha.png') }}"
-                            alt="Rev. Pastor Hari Sharan Shrestha" />
-                        <h3 class="mt-6 text-xl font-semibold leading-8 text-slate-600">Rev. Pastor Hari Sharan Shrestha
-                        </h3>
-                        <p class="leading-7 text-slate-500">Member</p>
-                        <p class="text-sm leading-6 text-slate-500">Nigah Community Church</p>
-                    </li>
-                    <li>
-                        <img class="aspect-[14/16] w-full rounded-xl object-cover"
                             src="{{ asset('images/board-members/rajendra-ale.png') }}" alt="Rev. Pastor Rajendra Ale" />
                         <h3 class="mt-6 text-xl font-semibold leading-8 text-slate-600">Rev. Pastor Rajendra Ale</h3>
                         <p class="leading-7 text-slate-500">Member</p>
                         <p class="text-sm leading-6 text-slate-500">Himalayan Jivan Church</p>
+                    </li>
+                    <li>
+                        <img class="aspect-[14/16] w-full rounded-xl object-cover"
+                            src="{{ asset('images/board-members/pastor-ranga-lohar.png') }}"
+                            alt="Rev. Pastor Ranga Lohar" />
+                        <h3 class="mt-6 text-xl font-semibold leading-8 text-slate-600">Rev. Pastor Ranga Lohar</h3>
+                        <p class="leading-7 text-slate-500">Member</p>
+                        <p class="text-sm leading-6 text-slate-500">Victory Church, Gokarna</p>
+                    </li>
+                    <li>
+                        <img class="aspect-[14/16] w-full rounded-xl object-cover"
+                            src="{{ asset('images/board-members/elder-yubraj-baraily.png') }}"
+                            alt="Elder Yubraj Baraily" />
+                        <h3 class="mt-6 text-xl font-semibold leading-8 text-slate-600">Elder Yubraj Baraily</h3>
+                        <p class="leading-7 text-slate-500">Member</p>
+                        <p class="text-sm leading-6 text-slate-500">Encourage Gospel Church, Kathmandu</p>
+                    </li>
+                    <li>
+                        <img class="aspect-[14/16] w-full rounded-xl object-cover"
+                            src="{{ asset('images/board-members/dipendra-gurung.png') }}"
+                            alt="Rev. Pastor Dipendra Gurung" />
+                        <h3 class="mt-6 text-xl font-semibold leading-8 text-slate-600">Rev. Pastor Dipendra Gurung</h3>
+                        <p class="leading-7 text-slate-500">Member</p>
+                        <p class="text-sm leading-6 text-slate-500">Jagriti Church, Kathmandu</p>
                     </li>
 
                     <!-- Advisor -->
