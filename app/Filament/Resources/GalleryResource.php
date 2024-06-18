@@ -55,7 +55,7 @@ class GalleryResource extends Resource
                         ->columnSpanFull(),
                     Forms\Components\FileUpload::make('photos')
                         ->required()
-                        ->helperText('Recommended Aspect: 16:9 (Rectangular). Max File Size: 1 MB')
+                        ->helperText('Recommended Aspect: 16:9 (Rectangular) | Max File Size: 1 MB')
                         ->directory('galleries')
                         ->image()
                         ->multiple()
@@ -110,7 +110,7 @@ class GalleryResource extends Resource
             ])
             ->bulkActions([
                 //
-            ]);
+        ]);
     }
 
     public static function getRelations(): array

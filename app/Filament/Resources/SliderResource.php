@@ -24,6 +24,7 @@ class SliderResource extends Resource
                 Forms\Components\Section::make([
                     Forms\Components\FileUpload::make('photo')
                         ->required()
+                        ->helperText('Dimension: 1440 x 594px | Max File Size: 1 MB')
                         ->directory('sliders')
                         ->image()
                         ->imageEditor()
@@ -64,10 +65,10 @@ class SliderResource extends Resource
                     }),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
+            Tables\Actions\BulkActionGroup::make([
                     //                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
-            ]);
+            ]),
+        ]);
     }
 
     public static function getRelations(): array
