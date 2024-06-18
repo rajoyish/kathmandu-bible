@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Gallery;
 
 use App\Http\Controllers\Controller;
 use App\Models\Gallery;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOMeta;
 
 class GalleryShowController extends Controller
 {
@@ -12,6 +14,11 @@ class GalleryShowController extends Controller
      */
     public function __invoke(Gallery $gallery)
     {
+        $title = $gallery->title;
+
+        SEOMeta::setTitle($title);
+        OpenGraph::setTitle($title);
+
         $photos = collect($gallery->photos);
 
         $photosWithDimensions = $photos->map(function ($photo) {
