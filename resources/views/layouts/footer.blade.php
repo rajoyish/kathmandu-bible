@@ -107,7 +107,7 @@
                             </li>
                             <li>
                                 <a href="{{ route('advisors') }}"
-                                    class="leading-6 text-slate-300 hover:text-cyan-500">Advisors</a>
+                                    class="leading-6 text-slate-300 hover:text-cyan-500">Board of Advisors</a>
                             </li>
                         </ul>
                     </div>
