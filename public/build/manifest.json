@@ -1,4 +1,8 @@
 {
+  "_embla-carousel-autoplay.esm-B9VX0OX-.js": {
+    "file": "assets/embla-carousel-autoplay.esm-B9VX0OX-.js",
+    "name": "embla-carousel-autoplay.esm"
+  },
   "node_modules/photoswipe/dist/photoswipe.esm.js": {
     "file": "assets/photoswipe.esm-GXRgw7eJ.js",
     "name": "photoswipe.esm",
@@ -6,7 +10,7 @@
     "isDynamicEntry": true
   },
   "resources/css/app.css": {
-    "file": "assets/app-B1jUAoxp.css",
+    "file": "assets/app-B5hhPvqc.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -16,11 +20,29 @@
     "src": "resources/js/app.js",
     "isEntry": true
   },
-  "resources/js/embla.js": {
-    "file": "assets/embla-BawVU2aT.js",
-    "name": "embla",
-    "src": "resources/js/embla.js",
-    "isEntry": true
+  "resources/js/embla-slider.js": {
+    "file": "assets/embla-slider-DEBMluKK.js",
+    "name": "embla-slider",
+    "src": "resources/js/embla-slider.js",
+    "isEntry": true,
+    "imports": [
+      "_embla-carousel-autoplay.esm-B9VX0OX-.js"
+    ],
+    "css": [
+      "assets/embla-slider-Dz6xpZVb.css"
+    ]
+  },
+  "resources/js/gallery-carousel.js": {
+    "file": "assets/gallery-carousel-ZzEbB72l.js",
+    "name": "gallery-carousel",
+    "src": "resources/js/gallery-carousel.js",
+    "isEntry": true,
+    "imports": [
+      "_embla-carousel-autoplay.esm-B9VX0OX-.js"
+    ],
+    "css": [
+      "assets/gallery-carousel-CxuUhhfk.css"
+    ]
   },
   "resources/js/nav.js": {
     "file": "assets/nav-BiBcy3jk.js",

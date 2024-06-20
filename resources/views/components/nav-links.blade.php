@@ -1,7 +1,4 @@
-<x-nav-item href="/">
-    Home
-</x-nav-item>
-
+<x-nav-item :href="route('home.index')" :active="request()->routeIs('home.index')">Home</x-nav-item>
 <li class="group relative max-md:border-b max-md:px-3 max-md:py-3">
     <a href="#"
         class="block text-slate-700 transition-colors hover:text-cyan-600 md:text-white hover:md:text-yellow-300">

@@ -13,7 +13,7 @@ class BoardMemberController extends Controller
      */
     public function __invoke()
     {
-        $title = 'Board Members';
+        $title = 'Board of Members';
 
         SEOMeta::setTitle($title);
         OpenGraph::setTitle($title);

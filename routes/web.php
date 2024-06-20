@@ -9,10 +9,7 @@ use App\Http\Controllers\Gallery\GalleryShowController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::controller(HomeController::class)->group(function () {
-    Route::get('/', 'index')->name('home.index');
-    Route::get('/', 'indexSlider');
-});
+Route::get('/', HomeController::class)->name('home.index');
 
 Route::controller(AboutUsController::class)->group(function () {
     Route::get('introduction', 'introduction')->name('introduction');

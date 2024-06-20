@@ -15,7 +15,7 @@ class AdvisorController extends Controller
     public function __invoke()
     {
 
-        $title = 'Advisors';
+        $title = 'Board of Advisors';
 
         SEOMeta::setTitle($title);
         OpenGraph::setTitle($title);

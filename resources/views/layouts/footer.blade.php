@@ -80,6 +80,10 @@
                         <h3 class="font-semibold leading-6 text-white">About Us</h3>
                         <ul role="list" class="mt-6 space-y-4">
                             <li>
+                                <a href="{{ route('home.index') }}"
+                                    class="leading-6 text-slate-300 hover:text-cyan-500">Home</a>
+                            </li>
+                            <li>
                                 <a href="{{ route('introduction') }}"
                                     class="leading-6 text-slate-300 hover:text-cyan-500">Introduction</a>
                             </li>
