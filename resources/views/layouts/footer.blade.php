@@ -102,7 +102,8 @@
                                     of Faith</a>
                             </li>
                             <li>
-                                <a href="#" class="leading-6 text-slate-300 hover:text-cyan-500">Message from the
+                                <a href="{{ route('message-from-president') }}"
+                                    class="leading-6 text-slate-300 hover:text-cyan-500">Message from the
                                     President</a>
                             </li>
                             <li>

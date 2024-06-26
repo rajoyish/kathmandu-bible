@@ -8,54 +8,54 @@ use Artesaos\SEOTools\Facades\SEOMeta;
 
 class AboutUsController extends Controller
 {
-  public function introduction()
-  {
+    public function introduction()
+    {
 
-    $title = 'Introduction';
+        $title = 'Introduction';
 
-    SEOMeta::setTitle($title);
-    OpenGraph::setTitle($title);
+        SEOMeta::setTitle($title);
+        OpenGraph::setTitle($title);
 
-    return view('about-us.introduction');
-  }
+        return view('about-us.introduction');
+    }
 
-  public function visionPurposeAndMission()
-  {
-    $title = 'Vision Purpose And Mission';
+    public function visionPurposeAndMission()
+    {
+        $title = 'Vision Purpose And Mission';
 
-    SEOMeta::setTitle($title);
-    OpenGraph::setTitle($title);
+        SEOMeta::setTitle($title);
+        OpenGraph::setTitle($title);
 
-    return view('about-us.vision-purpose-mission');
-  }
+        return view('about-us.vision-purpose-mission');
+    }
 
-  public function CoreValues()
-  {
-    $title = 'Core Values';
+    public function CoreValues()
+    {
+        $title = 'Core Values';
 
-    SEOMeta::setTitle($title);
-    OpenGraph::setTitle($title);
+        SEOMeta::setTitle($title);
+        OpenGraph::setTitle($title);
 
-    return view('about-us.core-values');
-  }
+        return view('about-us.core-values');
+    }
 
-  public function statementOfFaith()
-  {
-    $title = 'Statement of Faith';
+    public function statementOfFaith()
+    {
+        $title = 'Statement of Faith';
 
-    SEOMeta::setTitle($title);
-    OpenGraph::setTitle($title);
+        SEOMeta::setTitle($title);
+        OpenGraph::setTitle($title);
 
-    return view('about-us.statement-of-faith');
-  }
+        return view('about-us.statement-of-faith');
+    }
 
-  public function messageFromPresident()
-  {
-    $title = 'Message from the President';
+    public function messageFromPresident()
+    {
+        $title = 'Message from the President';
 
-    SEOMeta::setTitle($title);
-    OpenGraph::setTitle($title);
+        SEOMeta::setTitle($title);
+        OpenGraph::setTitle($title);
 
-    return view('about-us.message-from-the-president');
-  }
+        return view('about-us.message-from-the-president');
+    }
 }

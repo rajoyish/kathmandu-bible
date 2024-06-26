@@ -1,10 +1,12 @@
 <x-guest-layout>
     <div class="bg-slate-50 py-24 sm:py-32">
         <div class="mx-auto px-6 text-center lg:px-8">
-            <div class="mx-auto lg:mx-0 space-y-8 mb-24">
-                <x-page-heading>{{ $gallery->title }}</x-page-heading>
-                <p class="text-slate-600">{{ $gallery->description }}</p>
-                <p class="text-slate-500">&bull; Created on {{ $gallery->created_at->format('d M, Y') }}</p>
+            <div class="mx-auto max-w-7xl">
+                <div class="lg:mx-0 space-y-8 mb-24">
+                    <x-page-heading>{{ $gallery->title }}</x-page-heading>
+                    <p class="text-slate-600">{{ $gallery->description }}</p>
+                    <p class="text-slate-500">&bull; Created on {{ $gallery->created_at->format('d M, Y') }}</p>
+                </div>
             </div>
 
             <ul id="kbi-gallery" role="list"

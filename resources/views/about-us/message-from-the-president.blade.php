@@ -1,6 +1,7 @@
 <x-guest-layout>
-    <section class="isolate overflow-hidden bg-white px-6 md:px-8">
+    <section class="isolate overflow-hidden bg-blue-50 px-6 md:px-8">
         <div class="relative mx-auto max-w-2xl py-24 sm:py-32 md:max-w-4xl">
+            <x-top-mesh-gradient />
             <x-page-heading class="lg:mb-32 mb-16">Message from the President</x-page-heading>
             <figure class="grid grid-cols-1 items-center gap-x-6 gap-y-8 md:gap-x-10">
                 <div class="relative col-span-2 md:col-start-1 md:row-start-2">
@@ -8,18 +9,18 @@
                         <path
                             d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
                     </svg>
-                    <blockquote class="text-xl font-semibold leading-8 text-slate-900 sm:text-2xl sm:leading-9">
+                    <blockquote class="text-xl font-semibold leading-8 text-slate-700 sm:text-2xl sm:leading-9">
                         <p>KBI is committed to serving the Lord in partnership with local churches, training, and
                             equipping individuals for God's mission in Nepal.</p>
                     </blockquote>
                 </div>
                 <div class="col-end-1 w-16 md:row-span-4 md:w-72">
                     <img class="rounded-xl bg-indigo-50 md:rounded-3xl"
-                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=576&h=576&q=80"
-                        alt="" />
+                        src="{{ asset('images/rev-devilal-shrestha-dev.png') }}"
+                        alt="Photo of Rev. Devilal Shrestha (Dev)" />
                 </div>
                 <figcaption class="text-base md:col-start-1 md:row-start-3">
-                    <div class="font-semibold text-slate-900">Rev. Devilal Shrestha (Dev)</div>
+                    <div class="font-semibold text-slate-700">Rev. Devilal Shrestha (Dev)</div>
                     <div class="mt-1 text-slate-500">President/Founder</div>
                 </figcaption>
             </figure>
@@ -54,13 +55,18 @@
                     to be academically and spiritually trained in the Word of God to fulfil the Great Commission of
                     Jesus Christ. We invite you to join our program!</p>
 
-                <p>Blessings,</p>
-                <p>Sign</p>
-                <p>
-                    <span>Rev. Devilal Shrestha (Dev)</span> <br />
-                    <span class="mt-1 text-slate-500">President/Founder</span>
-                </p>
+                <div>
+                    <p class="mb-8">Blessings,</p>
+                    <img class="size-32 mb-3" src="{{ asset('images/sign-of-dev.png') }}"
+                        alt="Sign of Rev. Devilal Shrestha (Dev)">
+                    <p>
+                        <span class="text-xl font-bold">Rev. Devilal Shrestha (Dev)</span> <br />
+                        <span class="mt-1 inline-block text-slate-500">President/Founder</span>
+                    </p>
+                </div>
+
             </article>
         </div>
+        <x-bottom-mesh-gradient />
     </section>
 </x-guest-layout>

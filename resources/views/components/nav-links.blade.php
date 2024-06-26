@@ -27,8 +27,8 @@
                 Statement of Faith
             </x-sub-nav-item>
         </x-sub-li-nav>
-        <x-sub-li-nav>
-            <x-sub-nav-item>
+        <x-sub-li-nav :active="request()->routeIs('message-from-president')">
+            <x-sub-nav-item :href="route('message-from-president')" :active="request()->routeIs('message-from-president')">
                 Message from the President
             </x-sub-nav-item>
         </x-sub-li-nav>
