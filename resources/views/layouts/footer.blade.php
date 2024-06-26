@@ -159,13 +159,14 @@
                             </li>
                             <li>
                                 <a href="{{ route('galleries.index') }}"
-                                    class="leading-6 text-slate-300 hover:text-cyan-500">Gallery</a>
+                                    class="leading-6 text-slate-300 hover:text-cyan-500">Galleries</a>
                             </li>
                             <li>
                                 <a href="#" class="leading-6 text-slate-300 hover:text-cyan-500">Downloads</a>
                             </li>
                             <li>
-                                <a href="#" class="leading-6 text-slate-300 hover:text-cyan-500">Donation</a>
+                                <a href="{{ route('support-us') }}"
+                                    class="leading-6 text-slate-300 hover:text-cyan-500">Support Us</a>
                             </li>
                             <li>
                                 <a href="#" class="leading-6 text-slate-300 hover:text-cyan-500">Contact</a>

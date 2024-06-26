@@ -20,7 +20,7 @@
                         alt="Photo of Rev. Devilal Shrestha (Dev)" />
                 </div>
                 <figcaption class="text-base md:col-start-1 md:row-start-3">
-                    <div class="font-semibold text-slate-700">Rev. Devilal Shrestha (Dev)</div>
+                    <div class="font-semibold text-slate-700">Rev. Pastor Devilal Shrestha (Dev)</div>
                     <div class="mt-1 text-slate-500">President/Founder</div>
                 </figcaption>
             </figure>
@@ -60,7 +60,7 @@
                     <img class="size-32 mb-3" src="{{ asset('images/sign-of-dev.png') }}"
                         alt="Sign of Rev. Devilal Shrestha (Dev)">
                     <p>
-                        <span class="text-xl font-bold">Rev. Devilal Shrestha (Dev)</span> <br />
+                        <span class="text-xl font-bold">Rev. Pastor Devilal Shrestha (Dev)</span> <br />
                         <span class="mt-1 inline-block text-slate-500">President/Founder</span>
                     </p>
                 </div>
