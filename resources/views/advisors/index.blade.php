@@ -1,5 +1,5 @@
 <x-guest-layout>
-  <section class="isolate overflow-hidden bg-blue-100 px-6 md:px-8">
+  <section class="isolate overflow-hidden bg-blue-200/50 px-6 md:px-8">
     <div class="relative mx-auto max-w-2xl py-24 sm:py-32 md:max-w-4xl">
       <x-top-mesh-gradient/>
       <x-page-heading>Board of Advisors</x-page-heading>
