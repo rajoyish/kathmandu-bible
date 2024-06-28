@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Advisors;
 
 use App\Http\Controllers\Controller;
+use App\Models\Advisor;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
-use Illuminate\Http\Request;
 
 class AdvisorController extends Controller
 {
@@ -20,6 +20,9 @@ class AdvisorController extends Controller
         SEOMeta::setTitle($title);
         OpenGraph::setTitle($title);
 
-        return view('advisors.index');
+        $advisors = Advisor::orderBy('order', 'asc')
+            ->get();
+
+        return view('advisors.index', ['advisors' => $advisors]);
     }
 }
