@@ -103,14 +103,14 @@ class GalleryResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                // Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make()->before(function (Gallery $record) {
                     Storage::delete('public/'.$record->cover_photo);
                 }),
             ])
             ->bulkActions([
                 //
-            ]);
+        ]);
     }
 
     public static function getRelations(): array
@@ -125,7 +125,7 @@ class GalleryResource extends Resource
         return [
             'index' => Pages\ListGalleries::route('/'),
             'create' => Pages\CreateGallery::route('/create'),
-            'edit' => Pages\EditGallery::route('/{record}/edit'),
+            // 'edit' => Pages\EditGallery::route('/{record}/edit'),
         ];
     }
 }
