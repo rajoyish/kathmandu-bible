@@ -36,7 +36,10 @@ class GalleryResource extends Resource
                             '16:9',
                         ])
                         ->imageEditorViewportWidth('1920')
-                        ->imageEditorViewportHeight('1080'),
+                        ->imageEditorViewportHeight('1080')
+                        ->deleteUploadedFileUsing(function ($file) {
+                            Storage::disk('public')->delete($file);
+                        }),
                     Forms\Components\TextInput::make('title')
                         ->required()
                         ->maxLength(255)
@@ -69,7 +72,10 @@ class GalleryResource extends Resource
                         ->imageEditorViewportHeight('1080')
                         ->fetchFileInformation(false)
                         ->maxSize(1024)
-                        ->maxFiles(10),
+                        ->maxFiles(10)
+                        ->deleteUploadedFileUsing(function ($file) {
+                            Storage::disk('public')->delete($file);
+                        }),
                 ]),
 
             ]);
@@ -103,7 +109,7 @@ class GalleryResource extends Resource
                 //
             ])
             ->actions([
-                // Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make()->before(function (Gallery $record) {
                     Storage::delete('public/'.$record->cover_photo);
                 }),
@@ -125,7 +131,7 @@ class GalleryResource extends Resource
         return [
             'index' => Pages\ListGalleries::route('/'),
             'create' => Pages\CreateGallery::route('/create'),
-            // 'edit' => Pages\EditGallery::route('/{record}/edit'),
+            'edit' => Pages\EditGallery::route('/{record}/edit'),
         ];
     }
 }

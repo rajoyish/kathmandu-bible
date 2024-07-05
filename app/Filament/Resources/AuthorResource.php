@@ -20,6 +20,8 @@ class AuthorResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user-circle';
 
+    protected static ?string $navigationGroup = 'Blog';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -46,7 +48,10 @@ class AuthorResource extends Resource
                     Forms\Components\FileUpload::make('photo')
                         ->required()
                         ->directory('authors')
-                        ->image(),
+                        ->image()
+                        ->deleteUploadedFileUsing(function ($file) {
+                            Storage::disk('public')->delete($file);
+                        }),
                 ]),
             ]);
     }

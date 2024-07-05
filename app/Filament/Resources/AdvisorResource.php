@@ -17,6 +17,8 @@ class AdvisorResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
+    protected static ?string $navigationGroup = 'Committee';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -25,7 +27,10 @@ class AdvisorResource extends Resource
                     Forms\Components\FileUpload::make('photo')
                         ->required()
                         ->directory('advisors')
-                        ->image(),
+                        ->image()
+                        ->deleteUploadedFileUsing(function ($file) {
+                            Storage::disk('public')->delete($file);
+                        }),
                     Forms\Components\TextInput::make('name')
                         ->required(),
                     Forms\Components\TextInput::make('designation')

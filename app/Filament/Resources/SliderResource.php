@@ -32,7 +32,10 @@ class SliderResource extends Resource
                         ->imageEditorViewportHeight('594')
                         ->imageResizeTargetWidth('1440')
                         ->imageResizeTargetHeight('594')
-                        ->maxSize(1024),
+                        ->maxSize(1024)
+                        ->deleteUploadedFileUsing(function ($file) {
+                            Storage::disk('public')->delete($file);
+                        }),
                 ]),
             ]);
     }
@@ -65,10 +68,10 @@ class SliderResource extends Resource
                     }),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
+            Tables\Actions\BulkActionGroup::make([
                     //                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
-            ]);
+            ]),
+        ]);
     }
 
     public static function getRelations(): array
