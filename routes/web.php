@@ -7,6 +7,8 @@ use App\Http\Controllers\BoardMember\BoardMemberController;
 use App\Http\Controllers\Gallery\GalleryIndexController;
 use App\Http\Controllers\Gallery\GalleryShowController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Post\PostIndexController;
+use App\Http\Controllers\Post\PostShowController;
 use App\Http\Controllers\SupportUs\SupportUsController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,3 +38,6 @@ Route::get('board-members', BoardMemberController::class)->name('board-members')
 Route::get('galleries', GalleryIndexController::class)->name('galleries.index');
 Route::get('galleries/{gallery:slug}', GalleryShowController::class)->name('galleries.show');
 Route::get('support-us', SupportUsController::class)->name('support-us');
+
+Route::get('posts', PostIndexController::class)->name('posts.index');
+Route::get('post/{post:slug}', PostShowController::class)->name('post.show');
