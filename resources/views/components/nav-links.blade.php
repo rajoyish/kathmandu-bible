@@ -82,7 +82,7 @@
 <x-nav-item>Faculty & Staff</x-nav-item>
 <x-nav-item>Testimonials</x-nav-item>
 <x-nav-item>Events</x-nav-item>
-<x-nav-item>Blog</x-nav-item>
+<x-nav-item :href="route('posts.index')" :active="request()->routeIs('posts.index')">Blog</x-nav-item>
 <x-nav-item :href="route('galleries.index')" :active="request()->routeIs('galleries.index')">Galleries</x-nav-item>
 <x-nav-item>Downloads</x-nav-item>
 <x-nav-item :href="route('support-us')" :active="request()->routeIs('support-us')">Support Us</x-nav-item>

@@ -155,7 +155,8 @@
                                 <a href="#" class="leading-6 text-slate-300 hover:text-cyan-500">Events</a>
                             </li>
                             <li>
-                                <a href="#" class="leading-6 text-slate-300 hover:text-cyan-500">Blog</a>
+                                <a href="{{ route('posts.index') }}"
+                                    class="leading-6 text-slate-300 hover:text-cyan-500">Blog</a>
                             </li>
                             <li>
                                 <a href="{{ route('galleries.index') }}"

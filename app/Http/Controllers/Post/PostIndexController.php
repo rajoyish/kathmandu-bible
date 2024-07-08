@@ -23,7 +23,7 @@ class PostIndexController extends Controller
 
         $posts = Post::select('title', 'slug', 'excerpt', 'thumbnail', 'author_id', 'created_at')
             ->with('author')->latest()
-            ->get();
+            ->paginate(12);
 
         return view('posts.index', ['posts' => $posts]);
     }

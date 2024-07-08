@@ -39,4 +39,7 @@
         </div>
     </div>
 
+
+    @include('posts.similar-posts')
+
 </x-guest-layout>

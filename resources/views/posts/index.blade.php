@@ -50,7 +50,9 @@
                     </article>
                 @endforeach
             </div>
+            <div class="mt-16">
+                {{ $posts->links() }}
+            </div>
         </div>
     </div>
-
 </x-guest-layout>

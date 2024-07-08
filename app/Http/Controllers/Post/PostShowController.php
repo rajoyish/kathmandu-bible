@@ -16,10 +16,23 @@ class PostShowController extends Controller
     public function __invoke(Post $post)
     {
         $title = $post->title;
+        $excerpt = $post->excerpt;
+        $postImage = url('storage/'.$post->thumbnail);
 
         SEOMeta::setTitle($title);
         OpenGraph::setTitle($title);
+        SEOMeta::setDescription($excerpt);
+        OpenGraph::setDescription($excerpt);
+        OpenGraph::addImage($postImage);
 
-        return view('posts.show', ['post' => $post]);
+        $similarPostsByAuthor = $post->author->posts()
+            ->where('id', '!=', $post->id)
+            ->take(3)
+            ->get();
+
+        return view('posts.show', [
+            'post' => $post,
+            'similarPosts' => $similarPostsByAuthor,
+        ]);
     }
 }
