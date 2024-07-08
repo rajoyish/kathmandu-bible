@@ -21,7 +21,7 @@
 
         <div class="mx-auto prose-lg prose-slate max-w-3xl leading-7 text-slate-700">
 
-            <div class="flex gap-2">
+            <div class="flex gap-2 border-b border-slate-200 pb-4">
                 <span class="inline-flex text-slate-400">
                     <x-icons.published-at />
                     Published at:
@@ -31,8 +31,7 @@
                 </span>
             </div>
 
-
-            <figure>
+            <figure class="md:mt-16 mt-8">
                 <img class="rounded-md" src="{{ url('storage/' . $post->thumbnail) }}"
                     alt="Thumbnail of {{ $post->title }}" />
             </figure>

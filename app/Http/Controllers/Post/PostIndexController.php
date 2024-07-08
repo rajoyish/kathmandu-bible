@@ -21,7 +21,7 @@ class PostIndexController extends Controller
         SEOMeta::setTitle($title);
         OpenGraph::setTitle($title);
 
-        $posts = Post::select('title', 'slug', 'excerpt', 'thumbnail', 'author_id')
+        $posts = Post::select('title', 'slug', 'excerpt', 'thumbnail', 'author_id', 'created_at')
             ->with('author')->latest()
             ->get();
 
