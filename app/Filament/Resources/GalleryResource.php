@@ -116,7 +116,7 @@ class GalleryResource extends Resource
             ])
             ->bulkActions([
                 //
-        ]);
+            ]);
     }
 
     public static function getRelations(): array

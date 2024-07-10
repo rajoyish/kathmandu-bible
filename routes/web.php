@@ -7,6 +7,7 @@ use App\Http\Controllers\BoardMember\BoardMemberController;
 use App\Http\Controllers\Gallery\GalleryIndexController;
 use App\Http\Controllers\Gallery\GalleryShowController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Post\PostByAuthorController;
 use App\Http\Controllers\Post\PostIndexController;
 use App\Http\Controllers\Post\PostShowController;
 use App\Http\Controllers\SupportUs\SupportUsController;
@@ -41,3 +42,4 @@ Route::get('support-us', SupportUsController::class)->name('support-us');
 
 Route::get('posts', PostIndexController::class)->name('posts.index');
 Route::get('post/{post:slug}', PostShowController::class)->name('post.show');
+Route::get('{author:slug}/posts', PostByAuthorController::class)->name('author.posts');

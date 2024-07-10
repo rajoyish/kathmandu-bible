@@ -5,7 +5,7 @@
                 <h3 class="text-center text-2xl sm:text-4xl font-bold text-slate-100 tracking-tight text-balance">
                     Explore More from
                     <span class="text-cyan-400 underline hover:text-blue-400">
-                        <a href="#">{{ $post->author->name }}</a>
+                        <a href="{{ route('author.posts', $post->author->slug) }}">{{ $post->author->name }}</a>
                     </span>
                 </h3>
             </div>

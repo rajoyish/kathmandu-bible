@@ -44,7 +44,7 @@
                     alt="Photo of author {{ $post->author->name }}" class="size-14 rounded-full bg-slate-100" />
                 <div class="leading-6">
                     <p class="font-semibold text-slate-900">
-                        <a href="#">
+                        <a href="{{ route('author.posts', $post->author->slug) }}">
                             <span class="absolute inset-0"></span>
                             {{ $post->author->name }}
                         </a>
