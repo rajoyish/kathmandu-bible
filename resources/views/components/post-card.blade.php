@@ -27,13 +27,13 @@
                 class="text-slate-500">{{ $post->created_at->format('F d, Y') }}</time>
         </div>
         <div class="group relative">
-            <h3 class="{{ $titleClasses }}" style="line-height: 1.25">
+            <h3 class="{{ $titleClasses }}" style="line-height: 1.5">
                 <a href="{{ route('post.show', $post) }}">
                     <span class="absolute inset-0"></span>
                     {{ $post->title }}
                 </a>
             </h3>
-            <p class="{{ $excerptClasses }}">
+            <p class="{{ $excerptClasses }}" style="line-height: 1.5">
                 {{ $post->excerpt }}
             </p>
         </div>

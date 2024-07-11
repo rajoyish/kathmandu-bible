@@ -5,4 +5,5 @@
     @if (count($galleries) >= 3)
         @include('home.recent-gallery-carousel')
     @endif
+    @include('posts.recent-posts')
 </x-guest-layout>

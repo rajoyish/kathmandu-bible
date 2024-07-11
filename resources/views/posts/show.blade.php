@@ -35,7 +35,9 @@
                 <img class="rounded-md" src="{{ url('storage/' . $post->thumbnail) }}"
                     alt="Thumbnail of {{ $post->title }}" />
             </figure>
-            {!! $post->body !!}
+            <div style="line-height: 1.8">
+                {!! $post->body !!}
+            </div>
         </div>
     </div>
 
