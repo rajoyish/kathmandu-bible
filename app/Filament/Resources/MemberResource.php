@@ -2,8 +2,8 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\AdvisorResource\Pages;
-use App\Models\Advisor;
+use App\Filament\Resources\MemberResource\Pages;
+use App\Models\Member;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -11,11 +11,11 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Support\Facades\Storage;
 
-class AdvisorResource extends Resource
+class MemberResource extends Resource
 {
-    protected static ?string $model = Advisor::class;
+    protected static ?string $model = Member::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationIcon = 'heroicon-o-users';
 
     protected static ?string $navigationGroup = 'Committee';
 
@@ -26,7 +26,7 @@ class AdvisorResource extends Resource
                 Forms\Components\Section::make([
                     Forms\Components\FileUpload::make('photo')
                         ->required()
-                        ->directory('advisors')
+                        ->directory('members')
                         ->image()
                         ->deleteUploadedFileUsing(function ($file) {
                             Storage::disk('public')->delete($file);
@@ -40,7 +40,7 @@ class AdvisorResource extends Resource
                     Forms\Components\Select::make('order')
                         ->options(function () {
                             // Fetch the count of advisors
-                            $advisorCount = Advisor::count();
+                            $advisorCount = Member::count();
 
                             // Generate options from 1 to advisorCount + 1
                             $maxValue = $advisorCount + 1;
@@ -49,7 +49,7 @@ class AdvisorResource extends Resource
                         })
                         ->native(false)
                         ->searchable()
-                        ->placeholder('Order of the Advisor')
+                        ->placeholder('Order of the Member')
                         ->preload(),
                 ]),
             ]);
@@ -86,7 +86,7 @@ class AdvisorResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make()
-                    ->before(function (Advisor $record) {
+                    ->before(function (Member $record) {
                         Storage::delete('public/'.$record->photo);
                     }),
             ])
@@ -103,14 +103,19 @@ class AdvisorResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListAdvisors::route('/'),
-            'create' => Pages\CreateAdvisor::route('/create'),
-            'edit' => Pages\EditAdvisor::route('/{record}/edit'),
+            'index' => Pages\ListMembers::route('/'),
+            'create' => Pages\CreateMember::route('/create'),
+            'edit' => Pages\EditMember::route('/{record}/edit'),
         ];
     }
 
     public static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();
+    }
+
+    public static function getNavigationBadgeColor(): ?string
+    {
+        return 'success';
     }
 }
