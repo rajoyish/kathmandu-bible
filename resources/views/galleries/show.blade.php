@@ -12,7 +12,6 @@
             <ul id="kbi-gallery" role="list"
                 class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8">
                 <!-- Photo -->
-
                 @foreach ($photosWithDimensions as $photo)
                     @if ($photo['width'] && $photo['height'])
                         <li class="relative">
@@ -26,14 +25,8 @@
                         </li>
                     @endif
                 @endforeach
-
-
-
                 <!-- Photo -->
-
             </ul>
-
-
         </div>
     </div>
 </x-guest-layout>

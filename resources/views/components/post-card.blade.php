@@ -1,18 +1,13 @@
-@props(['post', 'showAuthor' => true, 'dark' => true])
-
-@php
+@props(['post', 'showAuthor' => true, 'dark' => true]) @php
     $titleClasses = 'mt-3 text-2xl text-balance font-semibold leading-6';
     $excerptClasses = 'mt-5 line-clamp-3 leading-6';
-
     if ($dark === true) {
         $titleClasses .= ' text-slate-100 group-hover:text-cyan-600';
         $excerptClasses .= ' text-slate-400';
     }
-
     if ($dark === false) {
         $titleClasses .= ' text-slate-900 group-hover:text-slate-600';
     }
-
 @endphp
 
 <article class="flex flex-col items-start justify-between">
@@ -33,9 +28,7 @@
                     {{ $post->title }}
                 </a>
             </h3>
-            <p class="{{ $excerptClasses }}" style="line-height: 1.5">
-                {{ $post->excerpt }}
-            </p>
+            <p class="{{ $excerptClasses }}" style="line-height: 1.5">{{ $post->excerpt }}</p>
         </div>
         {{-- Author Block --}}
         @if ($showAuthor)
@@ -49,7 +42,7 @@
                             {{ $post->author->name }}
                         </a>
                     </p>
-                    <p class="text-slate-600 text-sm">{{ $post->author->email }}</p>
+                    <p class="text-sm text-slate-600">{{ $post->author->email }}</p>
                 </div>
             </div>
             {{-- Author Block --}}
