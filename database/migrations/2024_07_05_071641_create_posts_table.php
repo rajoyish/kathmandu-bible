@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->foreignIdFor(Author::class);
-            $table->string('excerpt');
-            $table->text('body');
+            $table->text('excerpt');
+            $table->longText('body');
             $table->string('thumbnail');
             $table->timestamps();
         });

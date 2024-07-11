@@ -53,7 +53,6 @@ class PostResource extends Resource
                             'blockquote',
                             'bold',
                             'bulletList',
-                            'codeBlock',
                             'h2',
                             'h3',
                             'italic',
@@ -119,8 +118,8 @@ class PostResource extends Resource
                     }),
             ])
             ->bulkActions([
-                //
-            ]);
+            //
+        ]);
     }
 
     public static function getRelations(): array
