@@ -6,18 +6,18 @@
             <div class="relative mt-8 flex items-center gap-x-4 md:gap-x-8">
                 <img src="{{ url('storage/' . $post->author->photo) }}" alt="Author {{ $post->author->name }}"
                     class="size-16 rounded-full bg-gray-100 md:size-32" />
-                <div class="space-y-1 leading-6">
-                    <p class="text-2xl font-bold text-gray-800">
+                <div class="leading-6">
+                    <p class="sm:text-2xl font-bold text-gray-800">
                         <a href="{{ route('author.posts', $post->author->slug) }}">
                             <span class="absolute inset-0"></span>
                             {{ $post->author->name }}
                         </a>
                     </p>
                     <p class="text-sm text-gray-600 md:text-lg">{{ $post->author->email }}</p>
-                    <div class="flex gap-2 pb-4 text-sm text-gray-600">
-                        <span class="inline-flex">
+                    <div class="flex text-sm text-gray-600 mt-2">
+                        <span class="inline-flex items-center">
                             <x-icons.published-at />
-                            <span>Published at:</span>
+                            <span class="sr-only">Published at:</span>
                         </span>
                         <span class="inline-flex"> {{ $post->created_at->format('F d, Y') }} </span>
                     </div>

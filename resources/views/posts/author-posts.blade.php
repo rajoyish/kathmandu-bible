@@ -1,7 +1,7 @@
 <x-guest-layout>
     <div class="bg-slate-800 py-24 sm:py-32">
         <div class="mx-auto max-w-[100rem] px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl text-center">
+            <div class="mx-auto text-center">
                 <h2 class="mb-8 text-center text-3xl sm:text-5xl font-bold text-slate-200 tracking-tight text-balance"
                     style="line-height: 1.5">
                     Posts from <span class="text-cyan-500">{{ $author->name }}</span>
