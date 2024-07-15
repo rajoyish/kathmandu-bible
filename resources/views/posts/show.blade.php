@@ -1,6 +1,9 @@
 <x-guest-layout>
     <div class="min-h-screen bg-slate-50 px-6 py-32 lg:px-8">
         <x-page-heading class="mb-8 md:mb-16" style="line-height: 1.5">{{ $post->title }}</x-page-heading>
+        <!-- ShareThis BEGIN -->
+        <div class="sharethis-inline-share-buttons"></div>
+        <!-- ShareThis END -->
 
         <div class="mx-auto mb-16 flex max-w-3xl justify-center">
             <div class="relative mt-8 flex items-center gap-x-4 md:gap-x-8">
