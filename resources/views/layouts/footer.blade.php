@@ -145,8 +145,8 @@
                         <h3 class="font-semibold leading-6 text-white">Quick Links</h3>
                         <ul role="list" class="mt-6 space-y-4">
                             <li>
-                                <a href="#" class="leading-6 text-slate-300 hover:text-cyan-500">Faculty &
-                                    Staff</a>
+                                <a href="{{ route('faculty') }}"
+                                    class="leading-6 text-slate-300 hover:text-cyan-500">Faculty</a>
                             </li>
                             <li>
                                 <a href="#" class="leading-6 text-slate-300 hover:text-cyan-500">Testimonials</a>

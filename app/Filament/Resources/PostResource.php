@@ -30,7 +30,7 @@ class PostResource extends Resource
             ->schema([
                 Forms\Components\Section::make([
                     Forms\Components\TextInput::make('title')
-                        ->live()
+                        ->live(onBlur: true)
                         ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
                             if (($get('slug') ?? '') !== Str::slug($old)) {
                                 return;
@@ -112,11 +112,18 @@ class PostResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make()
-                    ->before(function (Post $record) {
-                        Storage::delete('public/'.$record->thumbnail);
-                    }),
+                Tables\Actions\ViewAction::make()
+                    ->url(fn ($record) => route('post.show', $record->slug))
+                    ->openUrlInNewTab() // Optional: Open in a new tab
+                    ->label('View Post'), // Optional: Customize the label
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\EditAction::make(),
+                    Tables\Actions\DeleteAction::make()
+                        ->before(function (Post $record) {
+                            Storage::delete('public/'.$record->thumbnail);
+                        }),
+                ]),
+
             ])
             ->bulkActions([
             //

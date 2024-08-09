@@ -27,8 +27,15 @@ class AuthorResource extends Resource
         return $form
             ->schema([
                 Forms\Components\Section::make([
+                    Forms\Components\FileUpload::make('photo')
+                        ->required()
+                        ->directory('authors')
+                        ->image()
+                        ->deleteUploadedFileUsing(function ($file) {
+                            Storage::disk('public')->delete($file);
+                        })->columnSpanFull(),
                     Forms\Components\TextInput::make('name')
-                        ->live()
+                        ->live(onBlur: true)
                         ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
                             if (($get('slug') ?? '') !== Str::slug($old)) {
                                 return;
@@ -45,14 +52,7 @@ class AuthorResource extends Resource
                         ->required(),
                     Forms\Components\TextInput::make('email')
                         ->required(),
-                    Forms\Components\FileUpload::make('photo')
-                        ->required()
-                        ->directory('authors')
-                        ->image()
-                        ->deleteUploadedFileUsing(function ($file) {
-                            Storage::disk('public')->delete($file);
-                        }),
-                ]),
+                ])->columns(2),
             ]);
     }
 
@@ -61,7 +61,8 @@ class AuthorResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('photo')
-                    ->circular(),
+                    ->circular()
+                    ->grow(false),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('designation')
@@ -84,11 +85,14 @@ class AuthorResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make()
-                    ->before(function (Author $record) {
-                        Storage::delete('public/'.$record->photo);
-                    }),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\ViewAction::make(),
+                    Tables\Actions\EditAction::make(),
+                    Tables\Actions\DeleteAction::make()
+                        ->before(function (Author $record) {
+                            Storage::delete('public/'.$record->photo);
+                        }),
+                ]),
 
             ])
             ->bulkActions([]);

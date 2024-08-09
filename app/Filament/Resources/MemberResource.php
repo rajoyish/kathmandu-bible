@@ -30,7 +30,7 @@ class MemberResource extends Resource
                         ->image()
                         ->deleteUploadedFileUsing(function ($file) {
                             Storage::disk('public')->delete($file);
-                        }),
+                        })->columnSpanFull(),
                     Forms\Components\TextInput::make('name')
                         ->required(),
                     Forms\Components\TextInput::make('designation')
@@ -51,7 +51,7 @@ class MemberResource extends Resource
                         ->searchable()
                         ->placeholder('Order of the Member')
                         ->preload(),
-                ]),
+                ])->columns(2),
             ]);
     }
 
@@ -60,7 +60,8 @@ class MemberResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('photo')
-                    ->circular(),
+                    ->circular()
+                    ->grow(false),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable()
                     ->sortable(),
@@ -84,11 +85,15 @@ class MemberResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make()
-                    ->before(function (Member $record) {
-                        Storage::delete('public/'.$record->photo);
-                    }),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\ViewAction::make(),
+                    Tables\Actions\EditAction::make(),
+                    Tables\Actions\DeleteAction::make()
+                        ->before(function (Member $record) {
+                            Storage::delete('public/'.$record->photo);
+                        }),
+                ]),
+
             ])
             ->bulkActions([]);
     }

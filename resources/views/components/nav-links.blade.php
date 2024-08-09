@@ -79,7 +79,7 @@
 </li>
 
 
-<x-nav-item>Faculty & Staff</x-nav-item>
+<x-nav-item :href="route('faculty')" :active="request()->routeIs('faculty')">Faculty</x-nav-item>
 <x-nav-item>Testimonials</x-nav-item>
 <x-nav-item>Events</x-nav-item>
 <x-nav-item :href="route('posts.index')" :active="request()->routeIs('posts.index')">Blog</x-nav-item>

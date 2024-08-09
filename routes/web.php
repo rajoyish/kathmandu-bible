@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutUs\AboutUsController;
 use App\Http\Controllers\AcademicProgram\AcademicProgramController;
 use App\Http\Controllers\Advisors\AdvisorController;
 use App\Http\Controllers\BoardMember\BoardMemberController;
+use App\Http\Controllers\Faculty\FacultyController;
 use App\Http\Controllers\Gallery\GalleryIndexController;
 use App\Http\Controllers\Gallery\GalleryShowController;
 use App\Http\Controllers\HomeController;
@@ -36,6 +37,7 @@ Route::controller(AcademicProgramController::class)->group(function () {
 
 Route::get('advisors', AdvisorController::class)->name('advisors');
 Route::get('board-members', BoardMemberController::class)->name('board-members');
+
 Route::get('galleries', GalleryIndexController::class)->name('galleries.index');
 Route::get('galleries/{gallery:slug}', GalleryShowController::class)->name('galleries.show');
 Route::get('support-us', SupportUsController::class)->name('support-us');
@@ -43,3 +45,5 @@ Route::get('support-us', SupportUsController::class)->name('support-us');
 Route::get('posts', PostIndexController::class)->name('posts.index');
 Route::get('post/{post:slug}', PostShowController::class)->name('post.show');
 Route::get('{author:slug}/posts', PostByAuthorController::class)->name('author.posts');
+
+Route::get('faculty', FacultyController::class)->name('faculty');

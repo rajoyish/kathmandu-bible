@@ -2,8 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\AdvisorResource\Pages;
-use App\Models\Advisor;
+use App\Enums\FacultyPosition;
+use App\Filament\Resources\FacultyResource\Pages;
+use App\Models\Faculty;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -11,11 +12,11 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Support\Facades\Storage;
 
-class AdvisorResource extends Resource
+class FacultyResource extends Resource
 {
-    protected static ?string $model = Advisor::class;
+    protected static ?string $model = Faculty::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationIcon = 'heroicon-o-user-plus';
 
     protected static ?string $navigationGroup = 'Committee';
 
@@ -26,21 +27,24 @@ class AdvisorResource extends Resource
                 Forms\Components\Section::make([
                     Forms\Components\FileUpload::make('photo')
                         ->required()
-                        ->directory('advisors')
+                        ->directory('faculties')
                         ->image()
                         ->deleteUploadedFileUsing(function ($file) {
                             Storage::disk('public')->delete($file);
                         })->columnSpanFull(),
                     Forms\Components\TextInput::make('name')
                         ->required(),
-                    Forms\Components\TextInput::make('designation')
-                        ->required(),
-                    Forms\Components\TextInput::make('organization')
+                    Forms\Components\Select::make('position')
+                        ->required()
+                        ->options(FacultyPosition::class)
+                        ->native(false)
+                        ->searchable(),
+                    Forms\Components\TextInput::make('academic_degree')
                         ->required(),
                     Forms\Components\Select::make('order')
                         ->options(function () {
                             // Fetch the count of advisors
-                            $advisorCount = Advisor::count();
+                            $advisorCount = Faculty::count();
 
                             // Generate options from 1 to advisorCount + 1
                             $maxValue = $advisorCount + 1;
@@ -49,9 +53,10 @@ class AdvisorResource extends Resource
                         })
                         ->native(false)
                         ->searchable()
-                        ->placeholder('Order of the Advisor')
+                        ->placeholder('Order of the Faculty')
                         ->preload(),
                 ])->columns(2),
+
             ]);
     }
 
@@ -60,15 +65,16 @@ class AdvisorResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('photo')
-                    ->grow(false)
-                    ->circular(),
+                    ->circular()
+                    ->grow(false),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('designation')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('organization')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('position')
+                    ->searchable()
+                    ->sortable()
+                    ->badge(),
+                Tables\Columns\TextColumn::make('academic_degree'),
                 Tables\Columns\TextColumn::make('order')
                     ->grow(false)
                     ->numeric(),
@@ -90,12 +96,14 @@ class AdvisorResource extends Resource
                     Tables\Actions\ViewAction::make(),
                     Tables\Actions\EditAction::make(),
                     Tables\Actions\DeleteAction::make()
-                        ->before(function (Advisor $record) {
+                        ->before(function (Faculty $record) {
                             Storage::delete('public/'.$record->photo);
                         }),
                 ]),
             ])
-            ->bulkActions([]);
+            ->bulkActions([
+            //
+        ]);
     }
 
     public static function getRelations(): array
@@ -108,14 +116,20 @@ class AdvisorResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListAdvisors::route('/'),
-            'create' => Pages\CreateAdvisor::route('/create'),
-            'edit' => Pages\EditAdvisor::route('/{record}/edit'),
+            'index' => Pages\ListFaculties::route('/'),
+            'create' => Pages\CreateFaculty::route('/create'),
+            'view' => Pages\ViewFaculty::route('/{record}'),
+            'edit' => Pages\EditFaculty::route('/{record}/edit'),
         ];
     }
 
     public static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();
+    }
+
+    public static function getNavigationBadgeColor(): ?string
+    {
+        return 'warning';
     }
 }
