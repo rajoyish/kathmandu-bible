@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <div class="bg-white">
+    <div class="bg-white relative -z-50">
         <section class="relative isolate px-6 pt-14 lg:px-8 mb-16">
             <x-top-mesh-gradient />
 

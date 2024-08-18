@@ -10,12 +10,12 @@
     "isDynamicEntry": true
   },
   "resources/css/app.css": {
-    "file": "assets/app-Cpx83dZR.css",
+    "file": "assets/app-DBJWrJiA.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-Bg1aHGgo.js",
+    "file": "assets/app-BMqSfQBZ.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
@@ -43,12 +43,6 @@
     "css": [
       "assets/gallery-carousel-CxuUhhfk.css"
     ]
-  },
-  "resources/js/nav.js": {
-    "file": "assets/nav-BiBcy3jk.js",
-    "name": "nav",
-    "src": "resources/js/nav.js",
-    "isEntry": true
   },
   "resources/js/photoswipe.js": {
     "file": "assets/photoswipe-Bs41Subl.js",

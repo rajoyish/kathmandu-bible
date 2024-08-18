@@ -1,21 +1,33 @@
-<nav class="relative z-50 shadow-md">
-    <div class="relative flex flex-wrap justify-center bg-blue-800 px-10 py-3">
-        <div id="collapseMenu"
-            class="max-md:hidden max-md:before:fixed max-md:before:inset-0 max-md:before:z-50 max-md:before:bg-slate-950 max-md:before:opacity-40 md:!block">
-            <button id="toggleClose" class="fixed right-4 top-2 z-[100] rounded-full bg-white p-3 md:hidden">
-                <x-icons.x-mark />
-            </button>
+ <header class="z-50 flex w-full flex-wrap bg-blue-900 xl:flex-nowrap xl:justify-start">
+     <nav
+         class="relative mx-auto w-full max-w-[85rem] px-4 py-2 xl:flex xl:items-center xl:justify-center xl:gap-3 xl:px-8">
+         <!-- Logo w/ Collapse Button -->
+         <div class="flex items-center">
+             <!-- Collapse Button -->
+             <div class="xl:hidden">
+                 <button type="button"
+                     class="hs-collapse-toggle relative flex size-10 items-center justify-center rounded-lg border border-blue-200 font-semibold text-white hover:bg-blue-900 focus:bg-blue-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                     id="hs-header-classic-collapse" aria-expanded="false" aria-controls="hs-header-classic"
+                     aria-label="Toggle navigation" data-hs-collapse="#hs-header-classic">
+                     <x-icons.hamburger-nav />
+                     <x-icons.x-mark-nav />
+                     <span class="sr-only">Toggle navigation</span>
+                 </button>
+             </div>
+             <!-- End Collapse Button -->
+         </div>
+         <!-- End Logo w/ Collapse Button -->
 
-            <ul
-                class="z-50 items-center max-md:fixed max-md:left-0 max-md:top-0 max-md:h-full max-md:w-2/3 max-md:min-w-[300px] max-md:space-y-3 max-md:overflow-auto max-md:bg-white max-md:p-4 max-md:shadow-md md:flex md:gap-x-4 lg:gap-x-10">
-                <x-nav-links />
-            </ul>
-        </div>
-
-        <div id="toggleOpen" class="ml-auto flex md:hidden">
-            <button>
-                <x-icons.bars-4 />
-            </button>
-        </div>
-    </div>
-</nav>
+         <!-- Collapse -->
+         <div id="hs-header-classic"
+             class="hs-collapse hidden grow basis-full overflow-hidden transition-all duration-300 xl:block"
+             aria-labelledby="hs-header-classic-collapse">
+             <div
+                 class="max-h-[75vh] overflow-hidden overflow-y-auto [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar]:w-2">
+                 <div class="flex flex-col gap-0.5 py-2 xl:flex-row xl:items-center xl:justify-center xl:gap-1 xl:py-0">
+                     <x-nav.links />
+                 </div>
+             </div>
+         </div>
+     </nav>
+ </header>
