@@ -5,13 +5,13 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\GalleryResource\Pages;
 use App\Models\Gallery;
 use Filament\Forms;
-use Filament\Forms\Form;
+use Filament\Schemas\Schema;
 use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\FontWeight;
 use Filament\Tables;
-use Filament\Tables\Columns\TextColumn\TextColumnSize;
+use Filament\Support\Enums\TextSize;
 use Filament\Tables\Table;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -20,13 +20,13 @@ class GalleryResource extends Resource
 {
     protected static ?string $model = Gallery::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-photo';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-photo';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $form): Schema
     {
         return $form
             ->schema([
-                Forms\Components\Section::make([
+                \Filament\Schemas\Components\Section::make([
                     Forms\Components\FileUpload::make('cover_photo')
                         ->required()
                         ->directory('galleries')
@@ -89,7 +89,7 @@ class GalleryResource extends Resource
                     ->grow(false),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable()
-                    ->size(TextColumnSize::Large)
+                    ->size(TextSize::Large)
                     ->weight(FontWeight::Medium)
                     ->description(fn (Gallery $record): string => Str::limit($record->description, 100)),
                 Tables\Columns\TextColumn::make('slug')
@@ -109,8 +109,8 @@ class GalleryResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make()->before(function (Gallery $record) {
+                \Filament\Actions\EditAction::make(),
+                \Filament\Actions\DeleteAction::make()->before(function (Gallery $record) {
                     Storage::delete('public/'.$record->cover_photo);
                 }),
             ])
