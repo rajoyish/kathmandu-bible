@@ -21,7 +21,7 @@ class SliderResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Section::make([
+                \Filament\Schemas\Components\Section::make([
                     Forms\Components\FileUpload::make('photo')
                         ->required()
                         ->helperText('Dimension: 1440 x 594px | Max File Size: 1 MB')

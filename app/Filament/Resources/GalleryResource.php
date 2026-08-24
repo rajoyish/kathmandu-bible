@@ -26,7 +26,7 @@ class GalleryResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Section::make([
+                \Filament\Schemas\Components\Section::make([
                     Forms\Components\FileUpload::make('cover_photo')
                         ->required()
                         ->directory('galleries')

@@ -23,7 +23,7 @@ class MemberResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Section::make([
+                \Filament\Schemas\Components\Section::make([
                     Forms\Components\FileUpload::make('photo')
                         ->required()
                         ->directory('members')
