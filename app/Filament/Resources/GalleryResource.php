@@ -109,8 +109,8 @@ class GalleryResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make()->before(function (Gallery $record) {
+                \Filament\Actions\EditAction::make(),
+                \Filament\Actions\DeleteAction::make()->before(function (Gallery $record) {
                     Storage::delete('public/'.$record->cover_photo);
                 }),
             ])

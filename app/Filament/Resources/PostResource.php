@@ -112,13 +112,13 @@ class PostResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make()
+                \Filament\Actions\ViewAction::make()
                     ->url(fn ($record) => route('post.show', $record->slug))
                     ->openUrlInNewTab() // Optional: Open in a new tab
                     ->label('View Post'), // Optional: Customize the label
-                Tables\Actions\ActionGroup::make([
-                    Tables\Actions\EditAction::make(),
-                    Tables\Actions\DeleteAction::make()
+                \Filament\Actions\ActionGroup::make([
+                    \Filament\Actions\EditAction::make(),
+                    \Filament\Actions\DeleteAction::make()
                         ->before(function (Post $record) {
                             Storage::delete('public/'.$record->thumbnail);
                         }),
