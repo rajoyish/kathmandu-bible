@@ -5,13 +5,13 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\PostResource\Pages;
 use App\Models\Post;
 use Filament\Forms;
-use Filament\Forms\Form;
+use Filament\Schemas\Schema;
 use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\FontWeight;
 use Filament\Tables;
-use Filament\Tables\Columns\TextColumn\TextColumnSize;
+use Filament\Support\Enums\TextSize;
 use Filament\Tables\Table;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -20,15 +20,15 @@ class PostResource extends Resource
 {
     protected static ?string $model = Post::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-document-text';
 
-    protected static ?string $navigationGroup = 'Blog';
+    protected static string|\UnitEnum|null $navigationGroup = 'Blog';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $form): Schema
     {
         return $form
             ->schema([
-                Forms\Components\Section::make([
+                \Filament\Schemas\Components\Section::make([
                     Forms\Components\TextInput::make('title')
                         ->live(onBlur: true)
                         ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
@@ -91,7 +91,7 @@ class PostResource extends Resource
                     ->sortable()
                     ->limit(100)
                     ->searchable()
-                    ->size(TextColumnSize::Large)
+                    ->size(TextSize::Large)
                     ->weight(FontWeight::Medium)
                     ->description(fn (Post $record): string => Str::limit($record->excerpt, 100)),
                 Tables\Columns\TextColumn::make('author.name')
@@ -112,13 +112,13 @@ class PostResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make()
+                \Filament\Actions\ViewAction::make()
                     ->url(fn ($record) => route('post.show', $record->slug))
                     ->openUrlInNewTab() // Optional: Open in a new tab
                     ->label('View Post'), // Optional: Customize the label
-                Tables\Actions\ActionGroup::make([
-                    Tables\Actions\EditAction::make(),
-                    Tables\Actions\DeleteAction::make()
+                \Filament\Actions\ActionGroup::make([
+                    \Filament\Actions\EditAction::make(),
+                    \Filament\Actions\DeleteAction::make()
                         ->before(function (Post $record) {
                             Storage::delete('public/'.$record->thumbnail);
                         }),

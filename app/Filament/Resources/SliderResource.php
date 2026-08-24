@@ -5,7 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\SliderResource\Pages;
 use App\Models\Slider;
 use Filament\Forms;
-use Filament\Forms\Form;
+use Filament\Schemas\Schema;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -15,13 +15,13 @@ class SliderResource extends Resource
 {
     protected static ?string $model = Slider::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $form): Schema
     {
         return $form
             ->schema([
-                Forms\Components\Section::make([
+                \Filament\Schemas\Components\Section::make([
                     Forms\Components\FileUpload::make('photo')
                         ->required()
                         ->helperText('Dimension: 1440 x 594px | Max File Size: 1 MB')
@@ -61,15 +61,15 @@ class SliderResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make()
+                \Filament\Actions\EditAction::make(),
+                \Filament\Actions\DeleteAction::make()
                     ->before(function (Slider $record) {
                         Storage::delete('public/'.$record->photo);
                     }),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    //                    Tables\Actions\DeleteBulkAction::make(),
+                \Filament\Actions\BulkActionGroup::make([
+                    //                    \Filament\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }
