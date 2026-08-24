@@ -35,9 +35,6 @@
                             <x-icons.phone />
                         </span>
                         <div>
-                            <span class="mr-2 inline-block">
-                                <a href="tel:+9779841086379" title="Call Us">+977 9841086379,</a>
-                            </span>
                             <span>
                                 <a href="tel:+9779813083751" title="Call Us">+977 9813083751</a>
                             </span>
