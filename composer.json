@@ -7,7 +7,7 @@
     "require": {
         "php": "^8.2",
         "artesaos/seotools": "^1.3",
-        "filament/filament": "3.2.85",
+        "filament/filament": "^3.2.85",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9"
     },
@@ -19,8 +19,8 @@
         "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
-        "pestphp/pest": "^2.0",
-        "pestphp/pest-plugin-laravel": "^2.0"
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0"
     },
     "autoload": {
         "psr-4": {
@@ -64,6 +64,8 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "php-http/discovery": true
+        },
+        "policy": {
         }
     },
     "minimum-stability": "stable",
