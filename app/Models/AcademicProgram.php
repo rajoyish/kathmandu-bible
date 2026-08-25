@@ -12,7 +12,6 @@ class AcademicProgram extends Model
     protected $fillable = [
         'title',
         'slug',
-        'description',
         'badge_title',
         'badge_color',
         'language',
