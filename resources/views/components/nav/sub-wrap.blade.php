@@ -1,4 +1,7 @@
-<div
-    class="hs-dropdown [--adaptive:none] [--is-collapse:true] [--strategy:static] xl:[--is-collapse:false] xl:[--strategy:fixed]">
+<div x-data="{ open: false }"
+     @mouseenter="if (window.innerWidth >= 1280) open = true"
+     @mouseleave="if (window.innerWidth >= 1280) open = false"
+     @click.outside="open = false"
+     class="relative">
     {{ $slot }}
 </div>

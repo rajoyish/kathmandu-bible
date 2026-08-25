@@ -10,12 +10,12 @@
     "isDynamicEntry": true
   },
   "resources/css/app.css": {
-    "file": "assets/app-DzkK55XX.css",
+    "file": "assets/app-DqsPLyLn.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-BMqSfQBZ.js",
+    "file": "assets/app-Bg1aHGgo.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
@@ -45,7 +45,7 @@
     ]
   },
   "resources/js/photoswipe.js": {
-    "file": "assets/photoswipe-Bs41Subl.js",
+    "file": "assets/photoswipe-m05zkkN7.js",
     "name": "photoswipe",
     "src": "resources/js/photoswipe.js",
     "isEntry": true,
@@ -53,7 +53,7 @@
       "node_modules/photoswipe/dist/photoswipe.esm.js"
     ],
     "css": [
-      "assets/photoswipe-CvRwqrEO.css"
+      "assets/photoswipe-z3i1z0Ou.css"
     ]
   }
 }

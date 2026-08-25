@@ -4,11 +4,11 @@
 
 <!-- About Us -->
 <x-nav.sub-wrap>
-  <button id="hs-header-classic-dropdown" type="button"
-          class="hs-dropdown-toggle flex w-full items-center p-2 text-white hover:text-blue-300 focus:text-blue-300 focus:outline-none"
-          aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+  <button type="button" @click="open = !open"
+          class="flex w-full items-center p-2 text-white hover:text-blue-300 focus:text-blue-300 focus:outline-none"
+          aria-haspopup="menu" x-bind:aria-expanded="open.toString()" aria-label="Dropdown">
     About Us
-    <x-icons.chevron-nav/>
+    <x-icons.chevron-nav x-bind:class="open ? '-rotate-180 xl:rotate-0' : ''" />
   </button>
 
   <x-nav.sub-ul>
@@ -33,11 +33,11 @@
 <!--About Us -->
 <!-- KBI Board -->
 <x-nav.sub-wrap>
-  <button id="hs-header-classic-dropdown" type="button"
-          class="hs-dropdown-toggle flex w-full items-center p-2 text-white hover:text-blue-300 focus:text-blue-300 focus:outline-none"
-          aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+  <button type="button" @click="open = !open"
+          class="flex w-full items-center p-2 text-white hover:text-blue-300 focus:text-blue-300 focus:outline-none"
+          aria-haspopup="menu" x-bind:aria-expanded="open.toString()" aria-label="Dropdown">
     KBI Board
-    <x-icons.chevron-nav/>
+    <x-icons.chevron-nav x-bind:class="open ? '-rotate-180 xl:rotate-0' : ''" />
   </button>
   <x-nav.sub-ul>
     <x-nav.sub-item-li :href="route('board-members')" :active="request()->routeIs('board-members')">
@@ -54,11 +54,11 @@
 <!--KBI Board -->
 <!-- Academic Programs -->
 <x-nav.sub-wrap>
-  <button id="hs-header-classic-dropdown" type="button"
-          class="hs-dropdown-toggle flex w-full items-center p-2 text-white hover:text-blue-300 focus:text-blue-300 focus:outline-none"
-          aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+  <button type="button" @click="open = !open"
+          class="flex w-full items-center p-2 text-white hover:text-blue-300 focus:text-blue-300 focus:outline-none"
+          aria-haspopup="menu" x-bind:aria-expanded="open.toString()" aria-label="Dropdown">
     Academic Programs
-    <x-icons.chevron-nav/>
+    <x-icons.chevron-nav x-bind:class="open ? '-rotate-180 xl:rotate-0' : ''" />
   </button>
   <x-nav.sub-ul>
     <x-nav.sub-item-li :href="route('certificate-in-theology-c-th')"

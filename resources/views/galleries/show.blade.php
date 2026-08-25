@@ -16,7 +16,7 @@
                     @if ($photo['width'] && $photo['height'])
                         <li class="relative">
                             <a href="{{ url('storage/' . $photo['path']) }}"
-                                class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100"
+                                class="group aspect-[10/7] block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100"
                                 data-pswp-width="{{ $photo['width'] }}" data-pswp-height="{{ $photo['height'] }}"
                                 target="_blank">
                                 <img src="{{ url('storage/' . $photo['path']) }}" alt=""
