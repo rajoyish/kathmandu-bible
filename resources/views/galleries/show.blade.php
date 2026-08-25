@@ -4,7 +4,7 @@
             <div class="mx-auto max-w-7xl">
                 <div class="lg:mx-0 space-y-8 mb-24">
                     <x-page-heading>{{ $gallery->title }}</x-page-heading>
-                    <p class="text-slate-600">{{ $gallery->description }}</p>
+                    <p class="text-slate-600 text-left whitespace-pre-line">{{ $gallery->description }}</p>
                     <p class="text-slate-500">&bull; Created on {{ $gallery->created_at->format('d M, Y') }}</p>
                 </div>
             </div>
