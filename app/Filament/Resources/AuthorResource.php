@@ -29,7 +29,7 @@ class AuthorResource extends Resource
                 \Filament\Schemas\Components\Section::make([
                     Forms\Components\FileUpload::make('photo')
                         ->required()
-                        ->directory('authors')
+                        ->disk('public')->directory('authors')
                         ->image()
                         ->deleteUploadedFileUsing(function ($file) {
                             Storage::disk('public')->delete($file);
@@ -60,7 +60,7 @@ class AuthorResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('photo')
+                Tables\Columns\ImageColumn::make('photo')->disk('public')
                     ->circular()
                     ->grow(false),
                 Tables\Columns\TextColumn::make('name')

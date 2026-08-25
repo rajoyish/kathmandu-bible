@@ -63,11 +63,11 @@ class PostResource extends Resource
                             'underline',
                             'undo',
                         ])
-                        ->fileAttachmentsDirectory('post_images')
+                        ->fileAttachmentsDisk('public')->fileAttachmentsDirectory('post_images')
                         ->required(),
                     Forms\Components\FileUpload::make('thumbnail')
                         ->required()
-                        ->directory('post_thumbs')
+                        ->disk('public')->directory('post_thumbs')
                         ->image()
                         ->imageEditor()
                         ->imageEditorAspectRatios([
@@ -96,7 +96,7 @@ class PostResource extends Resource
                     ->description(fn (Post $record): string => Str::limit($record->excerpt, 100)),
                 Tables\Columns\TextColumn::make('author.name')
                     ->sortable(),
-                Tables\Columns\ImageColumn::make('thumbnail')
+                Tables\Columns\ImageColumn::make('thumbnail')->disk('public')
                     ->grow(false),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

@@ -26,7 +26,7 @@ class AdvisorResource extends Resource
                 \Filament\Schemas\Components\Section::make([
                     Forms\Components\FileUpload::make('photo')
                         ->required()
-                        ->directory('advisors')
+                        ->disk('public')->directory('advisors')
                         ->image()
                         ->deleteUploadedFileUsing(function ($file) {
                             Storage::disk('public')->delete($file);
@@ -59,7 +59,7 @@ class AdvisorResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('photo')
+                Tables\Columns\ImageColumn::make('photo')->disk('public')
                     ->grow(false)
                     ->circular(),
                 Tables\Columns\TextColumn::make('name')
