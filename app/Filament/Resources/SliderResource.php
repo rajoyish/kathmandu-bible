@@ -25,7 +25,7 @@ class SliderResource extends Resource
                     Forms\Components\FileUpload::make('photo')
                         ->required()
                         ->helperText('Dimension: 1440 x 594px | Max File Size: 1 MB')
-                        ->directory('sliders')
+                        ->disk('public')->directory('sliders')
                         ->image()
                         ->imageEditor()
                         ->imageEditorViewportWidth('1440')
@@ -44,7 +44,7 @@ class SliderResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('photo')
+                Tables\Columns\ImageColumn::make('photo')->disk('public')
                     ->width(200)
                     ->height(100)
                     ->circular(),

@@ -27,7 +27,7 @@ class FacultyResource extends Resource
                 \Filament\Schemas\Components\Section::make([
                     Forms\Components\FileUpload::make('photo')
                         ->required()
-                        ->directory('faculties')
+                        ->disk('public')->directory('faculties')
                         ->image()
                         ->deleteUploadedFileUsing(function ($file) {
                             Storage::disk('public')->delete($file);
@@ -64,7 +64,7 @@ class FacultyResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('photo')
+                Tables\Columns\ImageColumn::make('photo')->disk('public')
                     ->circular()
                     ->grow(false),
                 Tables\Columns\TextColumn::make('name')

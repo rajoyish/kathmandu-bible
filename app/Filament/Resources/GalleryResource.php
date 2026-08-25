@@ -29,7 +29,7 @@ class GalleryResource extends Resource
                 \Filament\Schemas\Components\Section::make([
                     Forms\Components\FileUpload::make('cover_photo')
                         ->required()
-                        ->directory('galleries')
+                        ->disk('public')->directory('galleries')
                         ->image()
                         ->imageEditor()
                         ->imageEditorAspectRatios([
@@ -59,7 +59,7 @@ class GalleryResource extends Resource
                     Forms\Components\FileUpload::make('photos')
                         ->required()
                         ->helperText('Recommended Aspect: 16:9 (Rectangular) | Max File Size: 1 MB')
-                        ->directory('galleries')
+                        ->disk('public')->directory('galleries')
                         ->image()
                         ->multiple()
                         ->reorderable()
@@ -85,7 +85,7 @@ class GalleryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('cover_photo')
+                Tables\Columns\ImageColumn::make('cover_photo')->disk('public')
                     ->grow(false),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable()
