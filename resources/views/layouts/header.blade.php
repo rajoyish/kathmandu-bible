@@ -12,15 +12,15 @@
     </header>
   </a>
   <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row xl:mt-0">
-    <div class="relative">
-      <input
+    <form action="{{ route('search') }}" method="GET" class="relative">
+      <input type="search" name="q" value="{{ request('q') }}"
         class="peer/changeIconColor h-14 w-full rounded-full border-2 border-cyan-600 bg-cyan-50 pl-14 pr-4 text-slate-800 placeholder:text-cyan-600 focus:border-none focus:outline-none focus:ring focus:ring-cyan-400 xl:w-96"
         placeholder="Search..."/>
-      <span
+      <button type="submit"
         class="absolute left-5 top-1/2 grid -translate-y-1/2 place-items-center text-xl text-cyan-600 transition-colors duration-300 peer-focus/changeIconColor:text-cyan-400">
                 <x-icons.magnifying-glass/>
-            </span>
-    </div>
+            </button>
+    </form>
     <div>
       @guest()
         <a href="{{ route('filament.admin.auth.login') }}"

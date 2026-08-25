@@ -39,3 +39,4 @@ Route::get('post/{post:slug}', PostShowController::class)->name('post.show');
 Route::get('{author:slug}/posts', PostByAuthorController::class)->name('author.posts');
 
 Route::get('faculty', FacultyController::class)->name('faculty');
+Route::get('/search', \App\Http\Controllers\SearchController::class)->name('search');
