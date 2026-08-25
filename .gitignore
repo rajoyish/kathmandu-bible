@@ -19,3 +19,16 @@ yarn-error.log
 /.idea
 /.vscode
 /public/sitemap.xml
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+error_log
+*.log
