@@ -49,7 +49,7 @@
                             {{ $program->title }}
                         </a>
                     </h3>
-                    <p class="mt-2 text-slate-500">{{ $program->summary }}</p>
+                    <p class="mt-2 text-slate-500">{{ Str::limit($program->description, 160) }}</p>
                 </div>
                 <span class="pointer-events-none absolute right-6 top-6 text-slate-300 group-hover:text-slate-400" aria-hidden="true">
                     <x-icons.angle-arrow/>
