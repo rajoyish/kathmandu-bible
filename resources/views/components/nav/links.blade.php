@@ -61,22 +61,12 @@
     <x-icons.chevron-nav x-bind:class="open ? '-rotate-180 xl:rotate-0' : ''" />
   </button>
   <x-nav.sub-ul>
-    <x-nav.sub-item-li :href="route('certificate-in-theology-c-th')"
-                       :active="request()->routeIs('certificate-in-theology-c-th')">
-      Certificate in Theology (C. Th.)
+    @foreach(\App\Models\AcademicProgram::orderBy('order_column')->get() as $program)
+    <x-nav.sub-item-li :href="route('academic-programs.show', $program->slug)"
+                       :active="request()->url() === route('academic-programs.show', $program->slug)">
+      {{ $program->title }}
     </x-nav.sub-item-li>
-    <x-nav.sub-item-li :href="route('diploma-in-theology-dip-th')"
-                       :active="request()->routeIs('diploma-in-theology-dip-th')">
-      Diploma in Theology (Dip. Th.)
-    </x-nav.sub-item-li>
-    <x-nav.sub-item-li :href="route('bachelor-of-theology-b-th')"
-                       :active="request()->routeIs('bachelor-of-theology-b-th')">
-      Bachelor of Theology (B. Th.)
-    </x-nav.sub-item-li>
-    <x-nav.sub-item-li :href="route('m-a-in-christian-missions')"
-                       :active="request()->routeIs('m-a-in-christian-missions')">
-      M.A. Christian Missions
-    </x-nav.sub-item-li>
+    @endforeach
   </x-nav.sub-ul>
 </x-nav.sub-wrap>
 <!-- / Academic Programs -->

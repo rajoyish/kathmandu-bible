@@ -116,24 +116,12 @@
                     <div class="mt-10 md:mt-0">
                         <h3 class="font-semibold leading-6 text-white">Academic Programs</h3>
                         <ul role="list" class="mt-6 space-y-4 uppercase">
+                            @foreach(\App\Models\AcademicProgram::orderBy('order_column')->get() as $program)
                             <li>
-                                <a href="{{ route('certificate-in-theology-c-th') }}"
-                                    class="leading-6 text-slate-300 hover:text-cyan-500">C. Th.</a>
+                                <a href="{{ route('academic-programs.show', $program->slug) }}"
+                                    class="leading-6 text-slate-300 hover:text-cyan-500">{{ $program->badge_title }}</a>
                             </li>
-                            <li>
-                                <a href="{{ route('diploma-in-theology-dip-th') }}"
-                                    class="leading-6 text-slate-300 hover:text-cyan-500">Dip. Th.</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('bachelor-of-theology-b-th') }}"
-                                    class="leading-6 text-slate-300 hover:text-cyan-500">B.
-                                    Th.</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('m-a-in-christian-missions') }}"
-                                    class="leading-6 text-slate-300 hover:text-cyan-500">M.A.
-                                    Christian Missions</a>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

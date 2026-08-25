@@ -3,43 +3,19 @@
 namespace App\Http\Controllers\AcademicProgram;
 
 use App\Http\Controllers\Controller;
+use App\Models\AcademicProgram;
 use Laravel\Head\Facades\Head;
 
 class AcademicProgramController extends Controller
 {
-    public function certificateInTheology()
+    public function show(AcademicProgram $academicProgram)
     {
-        $title = 'Certificate in Theology (C. Th.)';
+        $title = $academicProgram->title;
 
         Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
-        return view('academic-programs.certificate-in-theology-c-th');
-    }
-
-    public function diplomaInTheology()
-    {
-        $title = 'Diploma in Theology (Dip. Th.)';
-
-        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
-
-        return view('academic-programs.diploma-in-theology-dip-th');
-    }
-
-    public function bachelorOfTheology()
-    {
-        $title = 'Bachelor of Theology (B. Th.)';
-
-        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
-
-        return view('academic-programs.bachelor-of-theology-b-th');
-    }
-
-    public function mAInChristianMissions()
-    {
-        $title = 'M.A. in Christian Missions';
-
-        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
-
-        return view('academic-programs.m-a-in-christian-missions');
+        return view('academic-programs.show', [
+            'program' => $academicProgram,
+        ]);
     }
 }

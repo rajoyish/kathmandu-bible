@@ -24,16 +24,8 @@ Route::controller(AboutUsController::class)->group(function () {
     Route::get('message-from-the-president', 'messageFromPresident')->name('message-from-president');
 });
 
-Route::controller(AcademicProgramController::class)->group(function () {
-    Route::get('academic-programs/certificate-in-theology-c-th', 'certificateInTheology')
-        ->name('certificate-in-theology-c-th');
-    Route::get('academic-programs/diploma-in-theology-dip-th', 'diplomaInTheology')
-        ->name('diploma-in-theology-dip-th');
-    Route::get('academic-programs/bachelor-of-theology-b-th', 'bachelorOfTheology')
-        ->name('bachelor-of-theology-b-th');
-    Route::get('academic-programs/m-a-in-christian-missions', 'mAInChristianMissions')
-        ->name('m-a-in-christian-missions');
-});
+Route::get('academic-programs/{academicProgram:slug}', [AcademicProgramController::class, 'show'])->name('academic-programs.show');
+
 
 Route::get('advisors', AdvisorController::class)->name('advisors');
 Route::get('board-members', BoardMemberController::class)->name('board-members');
