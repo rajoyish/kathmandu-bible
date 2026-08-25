@@ -4,8 +4,7 @@ namespace App\Http\Controllers\Post;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;
-use Artesaos\SEOTools\Facades\OpenGraph;
-use Artesaos\SEOTools\Facades\SEOMeta;
+use Laravel\Head\Facades\Head;
 use Illuminate\Http\Request;
 
 class PostShowController extends Controller
@@ -19,11 +18,9 @@ class PostShowController extends Controller
         $excerpt = $post->excerpt;
         $postImage = url('storage/'.$post->thumbnail);
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
-        SEOMeta::setDescription($excerpt);
-        OpenGraph::setDescription($excerpt);
-        OpenGraph::addImage($postImage);
+        Head::title($title);
+        Head::description($excerpt);
+        Head::ogImage($postImage);
 
         $similarPostsByAuthor = $post->author->posts()
             ->where('id', '!=', $post->id)

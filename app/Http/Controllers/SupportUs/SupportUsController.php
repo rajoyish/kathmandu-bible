@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\SupportUs;
 
 use App\Http\Controllers\Controller;
-use Artesaos\SEOTools\Facades\OpenGraph;
-use Artesaos\SEOTools\Facades\SEOMeta;
+use Laravel\Head\Facades\Head;
 use Illuminate\Http\Request;
 
 class SupportUsController extends Controller
@@ -16,8 +15,7 @@ class SupportUsController extends Controller
     {
         $title = 'Support Us';
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
         return view('support-us.index');
     }

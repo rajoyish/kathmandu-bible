@@ -4,8 +4,7 @@ namespace App\Http\Controllers\Advisors;
 
 use App\Http\Controllers\Controller;
 use App\Models\Advisor;
-use Artesaos\SEOTools\Facades\OpenGraph;
-use Artesaos\SEOTools\Facades\SEOMeta;
+use Laravel\Head\Facades\Head;
 
 class AdvisorController extends Controller
 {
@@ -17,8 +16,7 @@ class AdvisorController extends Controller
 
         $title = 'Board of Advisors';
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
         $advisors = Advisor::orderBy('order', 'asc')
             ->get();

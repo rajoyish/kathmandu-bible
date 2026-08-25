@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\AcademicProgram;
 
 use App\Http\Controllers\Controller;
-use Artesaos\SEOTools\Facades\OpenGraph;
-use Artesaos\SEOTools\Facades\SEOMeta;
+use Laravel\Head\Facades\Head;
 
 class AcademicProgramController extends Controller
 {
@@ -12,8 +11,7 @@ class AcademicProgramController extends Controller
     {
         $title = 'Certificate in Theology (C. Th.)';
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
         return view('academic-programs.certificate-in-theology-c-th');
     }
@@ -22,8 +20,7 @@ class AcademicProgramController extends Controller
     {
         $title = 'Diploma in Theology (Dip. Th.)';
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
         return view('academic-programs.diploma-in-theology-dip-th');
     }
@@ -32,8 +29,7 @@ class AcademicProgramController extends Controller
     {
         $title = 'Bachelor of Theology (B. Th.)';
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
         return view('academic-programs.bachelor-of-theology-b-th');
     }
@@ -42,8 +38,7 @@ class AcademicProgramController extends Controller
     {
         $title = 'M.A. in Christian Missions';
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
         return view('academic-programs.m-a-in-christian-missions');
     }

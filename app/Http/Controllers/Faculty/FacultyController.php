@@ -4,8 +4,7 @@ namespace App\Http\Controllers\Faculty;
 
 use App\Http\Controllers\Controller;
 use App\Models\Faculty;
-use Artesaos\SEOTools\Facades\OpenGraph;
-use Artesaos\SEOTools\Facades\SEOMeta;
+use Laravel\Head\Facades\Head;
 use Illuminate\Http\Request;
 
 class FacultyController extends Controller
@@ -17,8 +16,7 @@ class FacultyController extends Controller
     {
         $title = 'Our Faculty';
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
         $faculties = Faculty::orderBy('order', 'asc')
             ->get();
