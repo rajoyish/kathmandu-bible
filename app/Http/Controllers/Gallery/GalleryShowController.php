@@ -4,8 +4,7 @@ namespace App\Http\Controllers\Gallery;
 
 use App\Http\Controllers\Controller;
 use App\Models\Gallery;
-use Artesaos\SEOTools\Facades\OpenGraph;
-use Artesaos\SEOTools\Facades\SEOMeta;
+use Laravel\Head\Facades\Head;
 
 class GalleryShowController extends Controller
 {
@@ -16,8 +15,9 @@ class GalleryShowController extends Controller
     {
         $title = $gallery->title;
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)
+            ->description('View the ' . $title . ' gallery from Kathmandu Bible Institute.')
+            ->og(image: url('storage/' . $gallery->cover_photo));
 
         $photos = collect($gallery->photos);
 

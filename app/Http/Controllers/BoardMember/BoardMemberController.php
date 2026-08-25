@@ -4,8 +4,7 @@ namespace App\Http\Controllers\BoardMember;
 
 use App\Http\Controllers\Controller;
 use App\Models\Member;
-use Artesaos\SEOTools\Facades\OpenGraph;
-use Artesaos\SEOTools\Facades\SEOMeta;
+use Laravel\Head\Facades\Head;
 
 class BoardMemberController extends Controller
 {
@@ -16,8 +15,7 @@ class BoardMemberController extends Controller
     {
         $title = 'Board of Members';
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
         $members = Member::orderBy('order', 'asc')
             ->get();

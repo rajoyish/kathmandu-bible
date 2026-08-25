@@ -8,11 +8,9 @@
     <link rel="icon" href="{{ asset('images/KBI-favicon.svg') }}" type="image/svg+xml">
 
     {{-- SEO TITLE --}}
-    {!! SEOMeta::generate() !!}
-    {!! OpenGraph::generate() !!}
+    @head
 
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

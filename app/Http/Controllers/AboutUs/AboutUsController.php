@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\AboutUs;
 
 use App\Http\Controllers\Controller;
-use Artesaos\SEOTools\Facades\OpenGraph;
-use Artesaos\SEOTools\Facades\SEOMeta;
+use Laravel\Head\Facades\Head;
 
 class AboutUsController extends Controller
 {
@@ -13,8 +12,7 @@ class AboutUsController extends Controller
 
         $title = 'Introduction';
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
         return view('about-us.introduction');
     }
@@ -23,8 +21,7 @@ class AboutUsController extends Controller
     {
         $title = 'Vision Purpose And Mission';
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
         return view('about-us.vision-purpose-mission');
     }
@@ -33,8 +30,7 @@ class AboutUsController extends Controller
     {
         $title = 'Core Values';
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
         return view('about-us.core-values');
     }
@@ -43,8 +39,7 @@ class AboutUsController extends Controller
     {
         $title = 'Statement of Faith';
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
         return view('about-us.statement-of-faith');
     }
@@ -53,8 +48,7 @@ class AboutUsController extends Controller
     {
         $title = 'Message from the President';
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
         return view('about-us.message-from-the-president');
     }

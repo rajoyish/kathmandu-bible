@@ -93,6 +93,7 @@ jobs:
             php artisan filament:optimize
             php artisan view:cache
             php artisan event:cache
+            php artisan sitemap:generate || true
             php artisan queue:restart || true
 
             php artisan up

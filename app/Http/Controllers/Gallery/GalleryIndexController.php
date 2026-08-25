@@ -4,8 +4,7 @@ namespace App\Http\Controllers\Gallery;
 
 use App\Http\Controllers\Controller;
 use App\Models\Gallery;
-use Artesaos\SEOTools\Facades\OpenGraph;
-use Artesaos\SEOTools\Facades\SEOMeta;
+use Laravel\Head\Facades\Head;
 
 class GalleryIndexController extends Controller
 {
@@ -16,8 +15,7 @@ class GalleryIndexController extends Controller
     {
         $title = 'Gallery';
 
-        SEOMeta::setTitle($title);
-        OpenGraph::setTitle($title);
+        Head::title($title)->description("Read about " . $title . " at Kathmandu Bible Institute.");
 
         $galleries = Gallery::select('cover_photo', 'title', 'slug', 'photos')->latest()->get();
 
