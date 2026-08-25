@@ -70,7 +70,6 @@ class GalleryResource extends Resource
                         ])
                         ->imageEditorViewportWidth('1920')
                         ->imageEditorViewportHeight('1080')
-                        ->fetchFileInformation(false)
                         ->maxSize(1024)
                         ->maxFiles(10)
                         ->deleteUploadedFileUsing(function ($file) {
